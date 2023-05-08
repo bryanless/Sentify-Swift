@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "realm-cocoa",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire",
+      "location" : "https://github.com/realm/realm-cocoa.git",
       "state" : {
-        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
-        "version" : "5.6.4"
+        "revision" : "08ee98e7f52a5fb11b10b7430e6f84adbb7433a4",
+        "version" : "10.39.1"
       }
     },
     {
@@ -16,15 +16,6 @@
       "state" : {
         "revision" : "72226e2fd84f3a3a8ab3cffc2890c7951f1351d5",
         "version" : "13.10.1"
-      }
-    },
-    {
-      "identity" : "realm-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/realm/realm-swift",
-      "state" : {
-        "revision" : "08ee98e7f52a5fb11b10b7430e6f84adbb7433a4",
-        "version" : "10.39.1"
       }
     },
     {

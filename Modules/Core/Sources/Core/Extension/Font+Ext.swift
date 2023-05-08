@@ -9,7 +9,7 @@ import SwiftUI
 
 // Credit: https://medium.com/@farhanadji/how-to-improve-text-font-style-consistency-in-swiftui-11d2b1085289
 extension Font {
-  public static func nunitoFont(size: CGFloat, weight: Font.Weight? = .regular) -> Font {
+  public static func nunitoFont(size: CGFloat, weight: Font.Weight = .regular) -> Font {
     var fontName = "Nunito-Regular"
     if weight == .bold {
       fontName = "Nunito-SemiBold"
@@ -73,19 +73,13 @@ public enum TypographyStyle {
 
 struct BaseTypography: ViewModifier {
   let type: TypographyStyle
-  let weight: Font.Weight?
+  let weight: Font.Weight
   let color: Color
 
   func body(content: Content) -> some View {
     content
       .font(.nunitoFont(size: type.size, weight: weight))
       .foregroundColor(color)
-  }
-
-  init(type: TypographyStyle, color: Color = CustomColor.onBackground) {
-    self.type = type
-    self.weight = nil
-    self.color = color
   }
 
   init(type: TypographyStyle, weight: Font.Weight, color: Color = CustomColor.onBackground) {

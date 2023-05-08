@@ -5,6 +5,7 @@
 //  Created by Bryan on 08/05/23.
 //
 
+import Core
 import SwiftUI
 
 struct ContentView: View {
@@ -14,7 +15,7 @@ struct ContentView: View {
         .imageScale(.large)
         .foregroundColor(.accentColor)
       Text("Hello, world!")
-        .typography(.body())
+        .typography(.body(color: CustomColor.onBackground))
     }
     .padding()
   }
