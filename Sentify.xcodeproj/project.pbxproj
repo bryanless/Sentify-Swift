@@ -14,6 +14,24 @@
 		937F163E2A08902100157355 /* SentifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F163D2A08902100157355 /* SentifyTests.swift */; };
 		937F16482A08902100157355 /* SentifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F16472A08902100157355 /* SentifyUITests.swift */; };
 		937F164A2A08902100157355 /* SentifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F16492A08902100157355 /* SentifyUITestsLaunchTests.swift */; };
+		937F165A2A08926100157355 /* Keys-Example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 937F16592A08926100157355 /* Keys-Example.plist */; };
+		937F165E2A08938B00157355 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 937F165D2A08938B00157355 /* Keys.plist */; };
+		937F16842A089C6900157355 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16832A089C6900157355 /* Nunito-Black.ttf */; };
+		937F16962A089C9B00157355 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16912A089C7300157355 /* Nunito-BlackItalic.ttf */; };
+		937F16972A089C9B00157355 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16902A089C7300157355 /* Nunito-Bold.ttf */; };
+		937F16982A089C9B00157355 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16942A089C7300157355 /* Nunito-BoldItalic.ttf */; };
+		937F16992A089C9B00157355 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16872A089C7300157355 /* Nunito-ExtraBold.ttf */; };
+		937F169A2A089C9B00157355 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168A2A089C7300157355 /* Nunito-ExtraBoldItalic.ttf */; };
+		937F169B2A089C9B00157355 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16892A089C7300157355 /* Nunito-ExtraLight.ttf */; };
+		937F169C2A089C9B00157355 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168B2A089C7300157355 /* Nunito-ExtraLightItalic.ttf */; };
+		937F169D2A089C9B00157355 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168E2A089C7300157355 /* Nunito-Italic.ttf */; };
+		937F169E2A089C9B00157355 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16882A089C7300157355 /* Nunito-Light.ttf */; };
+		937F169F2A089C9B00157355 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168F2A089C7300157355 /* Nunito-LightItalic.ttf */; };
+		937F16A02A089C9B00157355 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16862A089C7300157355 /* Nunito-Medium.ttf */; };
+		937F16A12A089C9B00157355 /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16922A089C7300157355 /* Nunito-MediumItalic.ttf */; };
+		937F16A22A089C9B00157355 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168D2A089C7300157355 /* Nunito-Regular.ttf */; };
+		937F16A32A089C9B00157355 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F168C2A089C7300157355 /* Nunito-SemiBold.ttf */; };
+		937F16A42A089C9B00157355 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16852A089C7300157355 /* Nunito-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +62,24 @@
 		937F16432A08902100157355 /* SentifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		937F16472A08902100157355 /* SentifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyUITests.swift; sourceTree = "<group>"; };
 		937F16492A08902100157355 /* SentifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		937F16592A08926100157355 /* Keys-Example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Keys-Example.plist"; sourceTree = "<group>"; };
+		937F165D2A08938B00157355 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		937F16832A089C6900157355 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		937F16852A089C7300157355 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		937F16862A089C7300157355 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		937F16872A089C7300157355 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		937F16882A089C7300157355 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		937F16892A089C7300157355 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		937F168A2A089C7300157355 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		937F168B2A089C7300157355 /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		937F168C2A089C7300157355 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		937F168D2A089C7300157355 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		937F168E2A089C7300157355 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		937F168F2A089C7300157355 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		937F16902A089C7300157355 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		937F16912A089C7300157355 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		937F16922A089C7300157355 /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
+		937F16942A089C7300157355 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +132,7 @@
 			children = (
 				937F162C2A08902000157355 /* SentifyApp.swift */,
 				937F162E2A08902000157355 /* ContentView.swift */,
-				937F16302A08902100157355 /* Assets.xcassets */,
+				937F16582A08921400157355 /* Supporting Files */,
 				937F16322A08902100157355 /* Preview Content */,
 			);
 			path = Sentify;
@@ -127,6 +163,40 @@
 			path = SentifyUITests;
 			sourceTree = "<group>";
 		};
+		937F16582A08921400157355 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				937F16822A089C5E00157355 /* Font */,
+				937F16302A08902100157355 /* Assets.xcassets */,
+				937F165D2A08938B00157355 /* Keys.plist */,
+				937F16592A08926100157355 /* Keys-Example.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		937F16822A089C5E00157355 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				937F16832A089C6900157355 /* Nunito-Black.ttf */,
+				937F16912A089C7300157355 /* Nunito-BlackItalic.ttf */,
+				937F16902A089C7300157355 /* Nunito-Bold.ttf */,
+				937F16942A089C7300157355 /* Nunito-BoldItalic.ttf */,
+				937F16872A089C7300157355 /* Nunito-ExtraBold.ttf */,
+				937F168A2A089C7300157355 /* Nunito-ExtraBoldItalic.ttf */,
+				937F16892A089C7300157355 /* Nunito-ExtraLight.ttf */,
+				937F168B2A089C7300157355 /* Nunito-ExtraLightItalic.ttf */,
+				937F168E2A089C7300157355 /* Nunito-Italic.ttf */,
+				937F16882A089C7300157355 /* Nunito-Light.ttf */,
+				937F168F2A089C7300157355 /* Nunito-LightItalic.ttf */,
+				937F16862A089C7300157355 /* Nunito-Medium.ttf */,
+				937F16922A089C7300157355 /* Nunito-MediumItalic.ttf */,
+				937F168D2A089C7300157355 /* Nunito-Regular.ttf */,
+				937F168C2A089C7300157355 /* Nunito-SemiBold.ttf */,
+				937F16852A089C7300157355 /* Nunito-SemiBoldItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,7 +206,9 @@
 			buildPhases = (
 				937F16252A08902000157355 /* Sources */,
 				937F16262A08902000157355 /* Frameworks */,
+				937F16572A0891EC00157355 /* Create Keys.plist */,
 				937F16272A08902000157355 /* Resources */,
+				937F16562A0891AB00157355 /* Run SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -231,8 +303,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937F16962A089C9B00157355 /* Nunito-BlackItalic.ttf in Resources */,
+				937F16972A089C9B00157355 /* Nunito-Bold.ttf in Resources */,
+				937F16982A089C9B00157355 /* Nunito-BoldItalic.ttf in Resources */,
+				937F16992A089C9B00157355 /* Nunito-ExtraBold.ttf in Resources */,
+				937F169A2A089C9B00157355 /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				937F169B2A089C9B00157355 /* Nunito-ExtraLight.ttf in Resources */,
+				937F169C2A089C9B00157355 /* Nunito-ExtraLightItalic.ttf in Resources */,
+				937F169D2A089C9B00157355 /* Nunito-Italic.ttf in Resources */,
+				937F169E2A089C9B00157355 /* Nunito-Light.ttf in Resources */,
+				937F169F2A089C9B00157355 /* Nunito-LightItalic.ttf in Resources */,
+				937F16A02A089C9B00157355 /* Nunito-Medium.ttf in Resources */,
+				937F16A12A089C9B00157355 /* Nunito-MediumItalic.ttf in Resources */,
+				937F16A22A089C9B00157355 /* Nunito-Regular.ttf in Resources */,
+				937F16A32A089C9B00157355 /* Nunito-SemiBold.ttf in Resources */,
+				937F16A42A089C9B00157355 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				937F16342A08902100157355 /* Preview Assets.xcassets in Resources */,
+				937F165A2A08926100157355 /* Keys-Example.plist in Resources */,
 				937F16312A08902100157355 /* Assets.xcassets in Resources */,
+				937F165E2A08938B00157355 /* Keys.plist in Resources */,
+				937F16842A089C6900157355 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +341,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		937F16562A0891AB00157355 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		937F16572A0891EC00157355 /* Create Keys.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(PRODUCT_NAME)/Supporting Files/Keys-Example.plist",
+			);
+			name = "Create Keys.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/$(PRODUCT_NAME)/Supporting Files/Keys.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "CONFIG_FILE_BASE_NAME=\"Keys\"\n\nCONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}.plist\nSAMPLE_CONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}-Example.plist\n\nCONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/Supporting\\ Files/$CONFIG_FILE_NAME\nSAMPLE_CONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/Supporting\\ Files/$SAMPLE_CONFIG_FILE_NAME\n\nif [ -f \"$CONFIG_FILE_PATH\" ]; then\n  echo \"$CONFIG_FILE_PATH exists.\"\nelse\n  echo \"$CONFIG_FILE_PATH does not exist, copying sample\"\n  cp -v \"${SAMPLE_CONFIG_FILE_PATH}\" \"${CONFIG_FILE_PATH}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		937F16252A08902000157355 /* Sources */ = {
@@ -420,6 +552,7 @@
 				DEVELOPMENT_TEAM = A43BFTSZWQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sentify/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.Sentify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -449,6 +582,7 @@
 				DEVELOPMENT_TEAM = A43BFTSZWQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sentify/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,7 +592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.Sentify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
