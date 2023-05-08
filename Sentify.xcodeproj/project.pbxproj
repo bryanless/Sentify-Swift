@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		937F162D2A08902000157355 /* SentifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162C2A08902000157355 /* SentifyApp.swift */; };
+		937F162F2A08902000157355 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162E2A08902000157355 /* ContentView.swift */; };
+		937F16312A08902100157355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937F16302A08902100157355 /* Assets.xcassets */; };
+		937F16342A08902100157355 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937F16332A08902100157355 /* Preview Assets.xcassets */; };
+		937F163E2A08902100157355 /* SentifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F163D2A08902100157355 /* SentifyTests.swift */; };
+		937F16482A08902100157355 /* SentifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F16472A08902100157355 /* SentifyUITests.swift */; };
+		937F164A2A08902100157355 /* SentifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F16492A08902100157355 /* SentifyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		937F163A2A08902100157355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937F16212A08902000157355 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 937F16282A08902000157355;
+			remoteInfo = Sentify;
+		};
+		937F16442A08902100157355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937F16212A08902000157355 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 937F16282A08902000157355;
+			remoteInfo = Sentify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		937F16292A08902000157355 /* Sentify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		937F162C2A08902000157355 /* SentifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyApp.swift; sourceTree = "<group>"; };
+		937F162E2A08902000157355 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		937F16302A08902100157355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		937F16332A08902100157355 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		937F16392A08902100157355 /* SentifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		937F163D2A08902100157355 /* SentifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyTests.swift; sourceTree = "<group>"; };
+		937F16432A08902100157355 /* SentifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		937F16472A08902100157355 /* SentifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyUITests.swift; sourceTree = "<group>"; };
+		937F16492A08902100157355 /* SentifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		937F16262A08902000157355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F16362A08902100157355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F16402A08902100157355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		937F16202A08902000157355 = {
+			isa = PBXGroup;
+			children = (
+				937F162B2A08902000157355 /* Sentify */,
+				937F163C2A08902100157355 /* SentifyTests */,
+				937F16462A08902100157355 /* SentifyUITests */,
+				937F162A2A08902000157355 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		937F162A2A08902000157355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				937F16292A08902000157355 /* Sentify.app */,
+				937F16392A08902100157355 /* SentifyTests.xctest */,
+				937F16432A08902100157355 /* SentifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		937F162B2A08902000157355 /* Sentify */ = {
+			isa = PBXGroup;
+			children = (
+				937F162C2A08902000157355 /* SentifyApp.swift */,
+				937F162E2A08902000157355 /* ContentView.swift */,
+				937F16302A08902100157355 /* Assets.xcassets */,
+				937F16322A08902100157355 /* Preview Content */,
+			);
+			path = Sentify;
+			sourceTree = "<group>";
+		};
+		937F16322A08902100157355 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				937F16332A08902100157355 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		937F163C2A08902100157355 /* SentifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				937F163D2A08902100157355 /* SentifyTests.swift */,
+			);
+			path = SentifyTests;
+			sourceTree = "<group>";
+		};
+		937F16462A08902100157355 /* SentifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				937F16472A08902100157355 /* SentifyUITests.swift */,
+				937F16492A08902100157355 /* SentifyUITestsLaunchTests.swift */,
+			);
+			path = SentifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		937F16282A08902000157355 /* Sentify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 937F164D2A08902100157355 /* Build configuration list for PBXNativeTarget "Sentify" */;
+			buildPhases = (
+				937F16252A08902000157355 /* Sources */,
+				937F16262A08902000157355 /* Frameworks */,
+				937F16272A08902000157355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sentify;
+			productName = Sentify;
+			productReference = 937F16292A08902000157355 /* Sentify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		937F16382A08902100157355 /* SentifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 937F16502A08902100157355 /* Build configuration list for PBXNativeTarget "SentifyTests" */;
+			buildPhases = (
+				937F16352A08902100157355 /* Sources */,
+				937F16362A08902100157355 /* Frameworks */,
+				937F16372A08902100157355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				937F163B2A08902100157355 /* PBXTargetDependency */,
+			);
+			name = SentifyTests;
+			productName = SentifyTests;
+			productReference = 937F16392A08902100157355 /* SentifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		937F16422A08902100157355 /* SentifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 937F16532A08902100157355 /* Build configuration list for PBXNativeTarget "SentifyUITests" */;
+			buildPhases = (
+				937F163F2A08902100157355 /* Sources */,
+				937F16402A08902100157355 /* Frameworks */,
+				937F16412A08902100157355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				937F16452A08902100157355 /* PBXTargetDependency */,
+			);
+			name = SentifyUITests;
+			productName = SentifyUITests;
+			productReference = 937F16432A08902100157355 /* SentifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		937F16212A08902000157355 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					937F16282A08902000157355 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					937F16382A08902100157355 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 937F16282A08902000157355;
+					};
+					937F16422A08902100157355 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 937F16282A08902000157355;
+					};
+				};
+			};
+			buildConfigurationList = 937F16242A08902000157355 /* Build configuration list for PBXProject "Sentify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 937F16202A08902000157355;
+			productRefGroup = 937F162A2A08902000157355 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				937F16282A08902000157355 /* Sentify */,
+				937F16382A08902100157355 /* SentifyTests */,
+				937F16422A08902100157355 /* SentifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		937F16272A08902000157355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				937F16342A08902100157355 /* Preview Assets.xcassets in Resources */,
+				937F16312A08902100157355 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F16372A08902100157355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F16412A08902100157355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		937F16252A08902000157355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				937F162F2A08902000157355 /* ContentView.swift in Sources */,
+				937F162D2A08902000157355 /* SentifyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F16352A08902100157355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				937F163E2A08902100157355 /* SentifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937F163F2A08902100157355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				937F16482A08902100157355 /* SentifyUITests.swift in Sources */,
+				937F164A2A08902100157355 /* SentifyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		937F163B2A08902100157355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 937F16282A08902000157355 /* Sentify */;
+			targetProxy = 937F163A2A08902100157355 /* PBXContainerItemProxy */;
+		};
+		937F16452A08902100157355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 937F16282A08902000157355 /* Sentify */;
+			targetProxy = 937F16442A08902100157355 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		937F164B2A08902100157355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		937F164C2A08902100157355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		937F164E2A08902100157355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sentify/Preview Content\"";
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.Sentify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		937F164F2A08902100157355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sentify/Preview Content\"";
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.Sentify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		937F16512A08902100157355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.SentifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sentify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sentify";
+			};
+			name = Debug;
+		};
+		937F16522A08902100157355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.SentifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sentify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sentify";
+			};
+			name = Release;
+		};
+		937F16542A08902100157355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.SentifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sentify;
+			};
+			name = Debug;
+		};
+		937F16552A08902100157355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43BFTSZWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneaky.SentifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sentify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		937F16242A08902000157355 /* Build configuration list for PBXProject "Sentify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937F164B2A08902100157355 /* Debug */,
+				937F164C2A08902100157355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		937F164D2A08902100157355 /* Build configuration list for PBXNativeTarget "Sentify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937F164E2A08902100157355 /* Debug */,
+				937F164F2A08902100157355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		937F16502A08902100157355 /* Build configuration list for PBXNativeTarget "SentifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937F16512A08902100157355 /* Debug */,
+				937F16522A08902100157355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		937F16532A08902100157355 /* Build configuration list for PBXNativeTarget "SentifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937F16542A08902100157355 /* Debug */,
+				937F16552A08902100157355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 937F16212A08902000157355 /* Project object */;
+}
