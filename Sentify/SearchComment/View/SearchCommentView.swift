@@ -15,24 +15,37 @@ struct SearchCommentView: View {
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
       CommentThreadTransformer>>
+  @State var scrollOffset: CGFloat
 
   init(
     viewModel: SearchCommentViewModel<
     GetCommentThreadRepository<
     GetCommentThreadLocaleDataSource,
     GetCommentThreadRemoteDataSource,
-    CommentThreadTransformer>>
+    CommentThreadTransformer>>,
+    scrollOffset: CGFloat = CGFloat.zero
   ) {
     self.viewModel = viewModel
+    self.scrollOffset = scrollOffset
   }
 
   var body: some View {
-    VStack {
+    NavigationBarScrollView(scrollOffset: $scrollOffset) {
+      Text("")
+    } content: {
+      content
+    }
+  }
+}
+
+extension SearchCommentView {
+  var content: some View {
+    VStack(spacing: Space.medium) {
       Text("Analyze Sentiment of YouTube comments")
-        .typography(.title())
+        .typography(.headline())
         .multilineTextAlignment(.center)
       SearchField(
-        placeholder: "YouTube link",
+        placeholder: "Enter YouTube link",
         searchText: $viewModel.channelName)
         .textInputAutocapitalization(.never)
       Button {

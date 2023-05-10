@@ -33,6 +33,7 @@
 		937F16A42A089C9B00157355 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937F16852A089C7300157355 /* Nunito-SemiBoldItalic.ttf */; };
 		939518532A0B4D6F00510A3C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 939518522A0B4D6F00510A3C /* .swiftlint.yml */; };
 		939518542A0B5A1900510A3C /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 937F165D2A08938B00157355 /* Keys.plist */; };
+		939518572A0B7A9000510A3C /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939518562A0B7A9000510A3C /* CommentItem.swift */; };
 		93F4059F2A08B4EF001C03E0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 93F4059E2A08B4EF001C03E0 /* Core */; };
 		93F405A22A08B5D5001C03E0 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 93F405A12A08B5D5001C03E0 /* Common */; };
 		93F405A52A08E799001C03E0 /* SentimentAnalysisHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405A42A08E799001C03E0 /* SentimentAnalysisHistoryView.swift */; };
@@ -98,6 +99,7 @@
 		937F16922A089C7300157355 /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
 		937F16942A089C7300157355 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
 		939518522A0B4D6F00510A3C /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		939518562A0B7A9000510A3C /* CommentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
 		93F4059D2A08B4E7001C03E0 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		93F405A02A08B5A6001C03E0 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Common; path = Modules/Common; sourceTree = "<group>"; };
 		93F405A42A08E799001C03E0 /* SentimentAnalysisHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisHistoryView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		937F162B2A08902000157355 /* Sentify */ = {
 			isa = PBXGroup;
 			children = (
+				939518552A0B7A5F00510A3C /* YouTubeViews */,
 				937F16D82A08AAAC00157355 /* App */,
 				93F405AE2A0A0764001C03E0 /* Core */,
 				93F405C12A0A9920001C03E0 /* SearchComment */,
@@ -258,6 +261,14 @@
 				937F162E2A08902000157355 /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		939518552A0B7A5F00510A3C /* YouTubeViews */ = {
+			isa = PBXGroup;
+			children = (
+				939518562A0B7A9000510A3C /* CommentItem.swift */,
+			);
+			path = YouTubeViews;
 			sourceTree = "<group>";
 		};
 		93F405A32A08E769001C03E0 /* SentimentAnalysisHistory */ = {
@@ -584,6 +595,7 @@
 				93F405B22A0A0783001C03E0 /* UINavigationController+Ext.swift in Sources */,
 				93F405C62A0A9A42001C03E0 /* CommentListView.swift in Sources */,
 				93F405CB2A0A9F83001C03E0 /* SearchCommentViewModel.swift in Sources */,
+				939518572A0B7A9000510A3C /* CommentItem.swift in Sources */,
 				93F405AD2A09FD48001C03E0 /* ChannelListView.swift in Sources */,
 				93F405AB2A09F57C001C03E0 /* SearchChannelView.swift in Sources */,
 				93F405C42A0A994A001C03E0 /* SearchCommentView.swift in Sources */,

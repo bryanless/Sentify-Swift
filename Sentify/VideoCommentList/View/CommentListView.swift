@@ -12,14 +12,16 @@ struct CommentListView: View {
   let comments: [CommentThreadModel]
 
   var body: some View {
-    List(comments) { comment in
-      Text(comment.title)
+    ForEach(comments) { comment in
+      CommentItem(commentThread: comment)
     }
   }
 }
 
 struct CommentListView_Previews: PreviewProvider {
   static var previews: some View {
-    CommentListView(comments: [])
+    CommentListView(comments: [
+      CommentThreadModel(id: "", title: "This is a comment")
+    ])
   }
 }

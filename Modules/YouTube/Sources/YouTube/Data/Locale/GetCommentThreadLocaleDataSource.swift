@@ -23,9 +23,9 @@ public struct GetCommentThreadLocaleDataSource: LocaleDataSource {
 
   public func list(request: CommentThreadRequest?) -> AnyPublisher<[CommentThreadEntity], Error> {
     return Future<[CommentThreadEntity], Error> { completion in
-      guard let request = request else {
-        return completion(.failure(URLError.invalidRequest))
-      }
+      //      guard let request = request else {
+      //        return completion(.failure(URLError.invalidRequest))
+      //      }
 
       let comments: Results<CommentThreadEntity> = {
         _realm.objects(CommentThreadEntity.self)
@@ -39,11 +39,12 @@ public struct GetCommentThreadLocaleDataSource: LocaleDataSource {
       do {
         try _realm.write {
           for comment in entities {
-            //            if let commentThreadEntity = _realm.object(ofType: CommentThreadEntity.self, forPrimaryKey: comment.id) {
-            //              _realm.add(anime, update: .all)
-            //            } else {
-            _realm.add(comment)
-            //                        }
+            if let commentThreadEntity = _realm.object(
+              ofType: CommentThreadEntity.self, forPrimaryKey: comment.id) {
+              _realm.add(commentThreadEntity, update: .all)
+            } else {
+              _realm.add(comment)
+            }
           }
           completion(.success(true))
         }
