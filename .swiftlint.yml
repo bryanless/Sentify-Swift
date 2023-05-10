@@ -1,0 +1,4 @@
+disabled_rules:
+  - generic_type_name
+  - force_cast
+  - large_tuple

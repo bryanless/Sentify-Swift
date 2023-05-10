@@ -8,10 +8,11 @@
 import Core
 import SwiftUI
 
-public struct AppBar<Content: View>: View {
+public struct AppBar<S: ShapeStyle, Content: View>: View {
   var scrollOffset: CGFloat
   let label: String
   let alwaysShowLabel: Bool
+  let backgroundColor: S
   let leading: () -> Content?
   let trailing: () -> Content?
 
@@ -19,41 +20,41 @@ public struct AppBar<Content: View>: View {
     scrollOffset: CGFloat,
     label: String,
     alwaysShowLabel: Bool = false,
+    backgroundColor: S = CustomColor.surface2,
     @ViewBuilder leading: @escaping () -> Content? = { Text("") },
     @ViewBuilder trailing: @escaping () -> Content? = { Text("") }
   ) {
     self.scrollOffset = scrollOffset
     self.label = label
     self.alwaysShowLabel = alwaysShowLabel
+    self.backgroundColor = backgroundColor
     self.leading = leading
     self.trailing = trailing
   }
 
   public var body: some View {
-    GeometryReader { geo in
-      VStack(spacing: Space.small) {
-        HStack(spacing: Space.small) {
-          leading()
-            .frame(maxWidth: geo.size.width / 4, alignment: .leading)
-          Text(label)
-            .typography(.title3(weight: .bold, color: .black))
-            .lineLimit(1)
-            .opacity(alwaysShowLabel ? 1 : scrollOffset / 100)
-            .frame(maxWidth: geo.size.width / 2, alignment: .center)
-          trailing()
-            .frame(maxWidth: geo.size.width / 4, alignment: .trailing)
-        }
+    VStack(spacing: Space.small) {
+      HStack(spacing: Space.small) {
+        leading()
+          .frame(alignment: .leading)
+        Text(label)
+          .typography(.title3(weight: .bold, color: .black))
+          .lineLimit(1)
+          .opacity(alwaysShowLabel ? 1 : scrollOffset / 100)
+          .frame(alignment: .center)
+        trailing()
+          .frame(alignment: .trailing)
       }
-      .padding(
-        EdgeInsets(
-          top: Space.none,
-          leading: Space.medium,
-          bottom: Space.small,
-          trailing: Space.medium)
-      )
-      .frame(width: geo.size.width)
-      .background(scrollOffset > 1 ? CustomColor.surface2 : Color.black.opacity(0))
     }
+    .padding(
+      EdgeInsets(
+        top: Space.none,
+        leading: Space.medium,
+        bottom: Space.small,
+        trailing: Space.medium)
+    )
+    .frame(maxWidth: .infinity)
+    .background(backgroundColor.opacity(scrollOffset / 100))
   }
 }
 
@@ -108,13 +109,13 @@ public struct BackAppBar<Content: View>: View {
 }
 
 struct AppBar_Previews: PreviewProvider {
-    static var previews: some View {
-      Group {
-        AppBar(scrollOffset: 500, label: "Title")
-          .previewDisplayName("App Bar")
+  static var previews: some View {
+    Group {
+      AppBar(scrollOffset: 500, label: "Title")
+        .previewDisplayName("App Bar")
 
-        BackAppBar(scrollOffset: 500, label: "Title")
-          .previewDisplayName("App Bar with Back")
-      }
+      BackAppBar(scrollOffset: 500, label: "Title")
+        .previewDisplayName("App Bar with Back")
     }
+  }
 }

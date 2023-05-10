@@ -8,10 +8,20 @@
 import Core
 import SwiftUI
 
-struct FilledButton: ButtonStyle {
+public struct FilledButton<S: ShapeStyle>: ButtonStyle {
   @State private var pressed = false
+  let foregroundColor: Color
+  let background: S
 
-  func makeBody(configuration: Configuration) -> some View {
+  public init(
+    foregroundColor: Color = CustomColor.onPrimary,
+    background: S = CustomColor.primary
+  ) {
+    self.foregroundColor = foregroundColor
+    self.background = background
+  }
+
+  public func makeBody(configuration: Configuration) -> some View {
     configuration.label
       .padding(
         EdgeInsets(
@@ -20,7 +30,8 @@ struct FilledButton: ButtonStyle {
           bottom: Space.small,
           trailing: Space.large)
       )
-      .background(CustomColor.primary)
+      .foregroundColor(foregroundColor)
+      .background(background)
       .compositingGroup()
       .opacity(configuration.isPressed ? 0.5 : 1.0)
       .clipShape(Capsule())

@@ -18,14 +18,6 @@ public struct TabBar: View {
   public var body: some View {
     HStack(alignment: .center) {
       TabItem(
-        icon: selection == .home ? Icons.house : Icons.houseOutlined,
-        label: "home_title",
-        isActive: selection == .home
-      ) {
-        selection = .home
-      }
-
-      TabItem(
         icon: Icons.search,
         label: "search_title",
         isActive: selection == .search
@@ -34,19 +26,11 @@ public struct TabBar: View {
       }
 
       TabItem(
-        icon: selection == .favorite ? Icons.heart : Icons.heartOutlined,
-        label: "favorite_title",
-        isActive: selection == .favorite
+        icon: selection == .history ? Icons.user : Icons.userOutlined,
+        label: "history_title",
+        isActive: selection == .history
       ) {
-        selection = .favorite
-      }
-
-      TabItem(
-        icon: selection == .profile ? Icons.user : Icons.userOutlined,
-        label: "profile_title",
-        isActive: selection == .profile
-      ) {
-        selection = .profile
+        selection = .history
       }
     }
     .frame(height: 56.0)
@@ -63,11 +47,11 @@ public struct TabBar: View {
 }
 
 public enum Tab {
-  case home, search, favorite, profile
+  case search, history
 }
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-      TabBar(selection: .constant(.home))
+      TabBar(selection: .constant(.search))
     }
 }
