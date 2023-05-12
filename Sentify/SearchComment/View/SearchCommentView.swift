@@ -16,6 +16,7 @@ struct SearchCommentView: View {
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
       CommentThreadTransformer>>
+  @FocusState private var isSearchBarFocused: Bool
   @State var scrollOffset: CGFloat
 
   init(
@@ -31,7 +32,7 @@ struct SearchCommentView: View {
   }
 
   var body: some View {
-    VStack(spacing: 0) {
+    ZStack {
       if viewModel.isLoading {
         ProgressIndicator()
           .background(CustomColor.background)
@@ -45,36 +46,53 @@ struct SearchCommentView: View {
     }
     .safeAreaInset(edge: .top) {
       search
-        .background(scrollOffset > 1 ? CustomColor.surface2 : CustomColor.background)
     }
+    .simultaneousGesture(tapGesture)
+    .simultaneousGesture(dragGesture)
   }
 }
 
 extension SearchCommentView {
+  var tapGesture: some Gesture {
+    TapGesture()
+      .onEnded {
+        isSearchBarFocused = false
+      }
+  }
+
+  var dragGesture: some Gesture {
+    DragGesture()
+      .onChanged { _ in
+        isSearchBarFocused = false
+      }
+  }
+
   var search: some View {
     VStack(spacing: Space.medium) {
-//      Text("Analyze Sentiment of YouTube comments")
-//        .typography(.headline())
-//        .multilineTextAlignment(.center)
+      //      Text("Analyze Sentiment of YouTube comments")
+      //        .typography(.headline())
+      //        .multilineTextAlignment(.center)
       SearchField(
         placeholder: "Enter YouTube link",
-        searchText: $viewModel.videoId)
+        searchText: $viewModel.videoId,
+        isFocused: _isSearchBarFocused)
       .textInputAutocapitalization(.never)
       .onSubmit(of: .text) {
         viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.videoId))
       }
-//      Button {
-//        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
-//      } label: {
-//        HStack {
-//          Spacer()
-//          Text("Analyze comments")
-//          Spacer()
-//        }
-//      }
-//      .buttonStyle(FilledButton())
+      //      Button {
+      //        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
+      //      } label: {
+      //        HStack {
+      //          Spacer()
+      //          Text("Analyze comments")
+      //          Spacer()
+      //        }
+      //      }
+      //      .buttonStyle(FilledButton())
     }
     .padding()
+    .background(scrollOffset > 1 ? CustomColor.surface2 : CustomColor.background)
   }
 
   var empty: some View {

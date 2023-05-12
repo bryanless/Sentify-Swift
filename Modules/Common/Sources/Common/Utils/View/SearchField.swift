@@ -16,10 +16,14 @@ public struct SearchField: View {
 
   public init(
     placeholder: String,
-    searchText: Binding<String>
+    searchText: Binding<String>,
+    isFocused: FocusState<Bool>? = nil
   ) {
     self.placeholder = placeholder
     self._searchText = searchText
+    if isFocused != nil {
+      self._isFocused = isFocused!
+    }
   }
 
   public var body: some View {
