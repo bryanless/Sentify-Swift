@@ -18,20 +18,18 @@ public struct ProgressIndicator: View {
   }
 
   public var body: some View {
-    GeometryReader { geo in
-      VStack(spacing: Space.medium) {
-        ProgressView()
-          .tint(CustomColor.onSurfaceVariant)
-        Text(_label.localized(bundle: .common))
-          .typography(.body(color: CustomColor.onSurfaceVariant))
-      }
-      .frame(width: geo.size.width, height: geo.size.height)
+    VStack(spacing: Space.medium) {
+      ProgressView()
+        .tint(CustomColor.onSurfaceVariant)
+      Text(_label.localized(bundle: .module))
+        .typography(.body(color: CustomColor.onSurfaceVariant))
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 }
 
 struct ProgressIndicator_Previews: PreviewProvider {
   static var previews: some View {
-    ProgressIndicator(label: "Searching anime")
+    ProgressIndicator(label: "Searching item")
   }
 }

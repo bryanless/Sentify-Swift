@@ -6,6 +6,7 @@
 //
 
 import Common
+import Core
 import SwiftUI
 import YouTube
 
@@ -30,37 +31,62 @@ struct SearchCommentView: View {
   }
 
   var body: some View {
-    NavigationBarScrollView(scrollOffset: $scrollOffset) {
-      Text("")
-    } content: {
-      content
+    VStack(spacing: 0) {
+      if viewModel.isLoading {
+        ProgressIndicator()
+          .background(CustomColor.background)
+      } else if viewModel.isError {
+        CustomEmptyView(label: viewModel.errorMessage)
+      } else if viewModel.items.isEmpty {
+        empty
+      } else {
+        content
+      }
+    }
+    .safeAreaInset(edge: .top) {
+      search
+        .background(scrollOffset > 1 ? CustomColor.surface2 : CustomColor.background)
     }
   }
 }
 
 extension SearchCommentView {
-  var content: some View {
+  var search: some View {
     VStack(spacing: Space.medium) {
-      Text("Analyze Sentiment of YouTube comments")
-        .typography(.headline())
-        .multilineTextAlignment(.center)
+//      Text("Analyze Sentiment of YouTube comments")
+//        .typography(.headline())
+//        .multilineTextAlignment(.center)
       SearchField(
         placeholder: "Enter YouTube link",
-        searchText: $viewModel.channelName)
-        .textInputAutocapitalization(.never)
-      Button {
-        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
-      } label: {
-        HStack {
-          Spacer()
-          Text("Analyze comments")
-          Spacer()
-        }
+        searchText: $viewModel.videoId)
+      .textInputAutocapitalization(.never)
+      .onSubmit(of: .text) {
+        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.videoId))
       }
-      .buttonStyle(FilledButton())
-      CommentListView(comments: viewModel.items)
+//      Button {
+//        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
+//      } label: {
+//        HStack {
+//          Spacer()
+//          Text("Analyze comments")
+//          Spacer()
+//        }
+//      }
+//      .buttonStyle(FilledButton())
     }
     .padding()
+  }
+
+  var empty: some View {
+    CustomEmptyView(label: "Nothing to show")
+  }
+
+  var content: some View {
+    ObservableScrollView(scrollOffset: $scrollOffset) {
+      CommentListView(comments: viewModel.items)
+        .padding()
+    }
+    .background(CustomColor.background)
   }
 }
 
@@ -72,6 +98,6 @@ struct SearchCommentView_Previews: PreviewProvider {
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
       CommentThreadTransformer>>(
-        commentThreadRepository: Injection().provideCommentThread()))
+        commentThreadRepository: Injection(inMemory: true).provideCommentThread()))
   }
 }

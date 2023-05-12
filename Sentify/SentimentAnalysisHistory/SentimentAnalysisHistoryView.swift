@@ -13,7 +13,7 @@ struct SentimentAnalysisHistoryView: View {
 
   var body: some View {
     NavigationBarScrollView(scrollOffset: $scrollOffset) {
-      AppBar(
+      InlineNavigationBar(
         scrollOffset: scrollOffset,
         label: "aa",
         backgroundColor: .ultraThinMaterial)

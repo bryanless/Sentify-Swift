@@ -12,6 +12,8 @@ public class CommentThreadEntity: Object {
 
   @Persisted(primaryKey: true) var id: String = ""
   @Persisted var title: String = ""
+  @Persisted var authorDisplayName: String = ""
+  @Persisted var authorProfileImageUrl: String = ""
   @Persisted var createdAt: Date = Date()
   @Persisted var updatedAt: Date = Date()
 

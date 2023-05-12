@@ -22,6 +22,8 @@ public struct CommentThreadTransformer: Mapper {
       let commentThreadEntity = CommentThreadEntity()
       commentThreadEntity.id = result.id
       commentThreadEntity.title = result.snippet.topLevelComment.snippet.textOriginal
+      commentThreadEntity.authorDisplayName = result.snippet.topLevelComment.snippet.authorDisplayName
+      commentThreadEntity.authorProfileImageUrl = result.snippet.topLevelComment.snippet.authorProfileImageUrl
       return commentThreadEntity
     }
   }
@@ -30,7 +32,9 @@ public struct CommentThreadTransformer: Mapper {
     return entity.map { result in
       return CommentThreadModel(
         id: result.id,
-        title: result.title)
+        title: result.title,
+        authorDisplayName: result.authorDisplayName,
+        authorProfileImageUrl: result.authorProfileImageUrl)
     }
   }
 }

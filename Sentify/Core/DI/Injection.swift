@@ -12,13 +12,26 @@ import YouTube
 
 final class Injection: NSObject {
 
-  private let realm = try? Realm()
+  private var realm: Realm
+
+  init(inMemory: Bool = false) {
+    let config: Realm.Configuration
+
+    if inMemory {
+      let identifier = "previewRealm"
+      config = Realm.Configuration(inMemoryIdentifier: identifier)
+    } else {
+      config = .defaultConfiguration
+    }
+
+    realm = try! Realm(configuration: config)
+  }
 
   func provideCommentThread<R: Repository>() -> R
   where
   R.Request == CommentThreadRequest,
   R.Response == [CommentThreadModel] {
-    let locale = GetCommentThreadLocaleDataSource(realm: realm!)
+    let locale = GetCommentThreadLocaleDataSource(realm: realm)
 
     let remote = GetCommentThreadRemoteDataSource(
       endpoint: YouTubeEndpoints.Gets.commentThreads.url,

@@ -1,5 +1,5 @@
 //
-//  AppBar.swift
+//  InlineNavigationBar.swift
 //  
 //
 //  Created by Bryan on 30/12/22.
@@ -8,7 +8,7 @@
 import Core
 import SwiftUI
 
-public struct AppBar<S: ShapeStyle, Content: View>: View {
+public struct InlineNavigationBar<S: ShapeStyle, Content: View>: View {
   var scrollOffset: CGFloat
   let label: String
   let alwaysShowLabel: Bool
@@ -111,7 +111,7 @@ public struct BackAppBar<Content: View>: View {
 struct AppBar_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      AppBar(scrollOffset: 500, label: "Title")
+      InlineNavigationBar(scrollOffset: 500, label: "Title")
         .previewDisplayName("App Bar")
 
       BackAppBar(scrollOffset: 500, label: "Title")

@@ -10,6 +10,7 @@ import SwiftUI
 
 public struct SearchField: View {
   @FocusState private var isFocused: Bool
+  @State private var shouldShowCancel: Bool = false
   let placeholder: String
   @Binding var searchText: String
 
@@ -60,13 +61,17 @@ public struct SearchField: View {
       .background(CustomColor.surfaceVariant)
       .cornerRadius(RoundedShape.small)
 
-      if isFocused {
-        Button("Cancel") {
+      if shouldShowCancel {
+        Button("Cancel", role: .cancel) {
           isFocused = false
         }
         .foregroundColor(CustomColor.onSurfaceVariant)
       }
     }
+    .onChange(of: isFocused) { value in
+      shouldShowCancel = value
+    }
+    .animation(.easeInOut(duration: 0.2), value: shouldShowCancel)
   }
 }
 

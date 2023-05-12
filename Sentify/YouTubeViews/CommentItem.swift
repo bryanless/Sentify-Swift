@@ -8,6 +8,7 @@
 import Common
 import Core
 import SwiftUI
+import SDWebImageSwiftUI
 import YouTube
 
 struct CommentItem: View {
@@ -15,7 +16,16 @@ struct CommentItem: View {
 
   var body: some View {
     HStack(alignment: .top, spacing: Space.medium) {
-      IconView(icon: Icons.userCircle, size: 44)
+      WebImage(url: URL(string: commentThread.authorProfileImageUrl))
+        .resizable()
+        .placeholder {
+          ImagePlaceholder()
+        }
+        .indicator(.activity)
+        .transition(.fade(duration: 0.5))
+        .scaledToFill()
+        .frame(width: 44, height: 44)
+        .cornerRadius(RoundedShape.full)
 
       VStack(alignment: .leading, spacing: Space.small) {
         header
@@ -31,7 +41,7 @@ struct CommentItem: View {
 
 extension CommentItem {
   var header: some View {
-    Text("Author Name")
+    Text(commentThread.authorDisplayName)
       .typography(.caption2(color: CustomColor.onSurfaceVariant))
   }
 
@@ -52,6 +62,8 @@ struct CommentItem_Previews: PreviewProvider {
     CommentItem(
       commentThread: CommentThreadModel(
         id: "id",
-        title: "This a short, one sentence comment which is commonly seen in the comment section."))
+        title: "This a short, one sentence comment which is commonly seen in the comment section.",
+      authorDisplayName: "Author Name",
+      authorProfileImageUrl: ""))
   }
 }

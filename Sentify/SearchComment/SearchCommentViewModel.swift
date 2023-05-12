@@ -19,7 +19,7 @@ where CommentThreadRepository.Request == CommentThreadRequest,
 
   private let _commentThreadRepository: CommentThreadRepository
 
-  @Published public var channelName: String = ""
+  @Published public var videoId: String = ""
   @Published public var items: [CommentThreadModel] = []
   @Published public var errorMessage: String = ""
   @Published public var isLoading: Bool = false
@@ -45,6 +45,7 @@ where CommentThreadRepository.Request == CommentThreadRequest,
           self.isLoading = false
         }
       }, receiveValue: { comments in
+        self.isError = false
         self.items = comments
       })
       .store(in: &cancellables)
