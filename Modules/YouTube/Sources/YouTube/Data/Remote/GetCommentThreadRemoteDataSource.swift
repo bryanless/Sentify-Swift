@@ -35,6 +35,7 @@ public struct GetCommentThreadRemoteDataSource: DataSource {
       let remoteRequest = CommentThreadRemoteRequest(
         part: request.part,
         videoId: request.videoId,
+        order: request.order.name,
         key: _apiKey
       )
 

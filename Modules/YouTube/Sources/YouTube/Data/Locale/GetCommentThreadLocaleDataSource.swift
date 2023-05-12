@@ -23,12 +23,16 @@ public struct GetCommentThreadLocaleDataSource: LocaleDataSource {
 
   public func list(request: CommentThreadRequest?) -> AnyPublisher<[CommentThreadEntity], Error> {
     return Future<[CommentThreadEntity], Error> { completion in
-      //      guard let request = request else {
-      //        return completion(.failure(URLError.invalidRequest))
-      //      }
+      guard let request = request else {
+        return completion(.failure(URLError.invalidRequest))
+      }
 
       let comments: Results<CommentThreadEntity> = {
         _realm.objects(CommentThreadEntity.self)
+          .where {
+            $0.videoId == request.videoId
+          }
+          .sorted(byKeyPath: request.order.sortKey)
       }()
       completion(.success(comments.toArray(ofType: CommentThreadEntity.self)))
     }.eraseToAnyPublisher()

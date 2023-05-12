@@ -62,6 +62,7 @@ struct CommentItem_Previews: PreviewProvider {
     CommentItem(
       commentThread: CommentThreadModel(
         id: "id",
+        videoId: "videoId",
         title: "This a short, one sentence comment which is commonly seen in the comment section.",
       authorDisplayName: "Author Name",
       authorProfileImageUrl: ""))
