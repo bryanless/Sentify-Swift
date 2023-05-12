@@ -11,6 +11,7 @@ public enum URLError: LocalizedError {
 
   case invalidRequest
   case invalidResponse
+  case notFound
   case addressUnreachable(URL)
   case notConnectedToInternet
 
@@ -18,6 +19,7 @@ public enum URLError: LocalizedError {
     switch self {
     case .invalidRequest: return "Request is null."
     case .invalidResponse: return "The server responded with garbage."
+    case .notFound: return "Not found"
     case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable."
     case .notConnectedToInternet: return "No internet connection"
     }

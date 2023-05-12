@@ -51,10 +51,14 @@ public struct GetCommentThreadRemoteDataSource: DataSource {
             completion(.success(value.items))
           case .failure(let error):
             if let error = error.underlyingError as? Foundation.URLError, error.code == .notConnectedToInternet {
-              // No internet connection
               completion(.failure(URLError.notConnectedToInternet))
             } else {
-              completion(.failure(URLError.invalidResponse))
+              switch error.responseCode {
+              case 404:
+                completion(.failure(URLError.notFound))
+              default:
+                completion(.failure(URLError.invalidResponse))
+              }
             }
           }
         }
