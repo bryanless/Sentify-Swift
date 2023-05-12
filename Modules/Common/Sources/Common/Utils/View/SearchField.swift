@@ -54,6 +54,15 @@ public struct SearchField: View {
             .focused($isFocused)
             .autocorrectionDisabled(true)
         }
+
+        if isFocused && !searchText.isEmpty {
+          Button {
+            searchText = ""
+            isFocused = true
+          } label: {
+            IconView(icon: Icons.closeCircle, color: CustomColor.onSurfaceVariant, size: 20)
+          }
+        }
       }
       .padding(
         EdgeInsets(
@@ -74,6 +83,9 @@ public struct SearchField: View {
     }
     .onChange(of: isFocused) { value in
       shouldShowCancel = value
+    }
+    .onTapGesture {
+      isFocused = true
     }
     .animation(.easeInOut(duration: 0.2), value: shouldShowCancel)
   }

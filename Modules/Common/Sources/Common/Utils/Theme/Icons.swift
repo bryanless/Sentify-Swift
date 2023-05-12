@@ -10,6 +10,7 @@ import UIKit
 public struct Icons {
   public static let caretLeft = UIImage(named: "CaretLeftIcon", in: .module, compatibleWith: nil)!
   public static let close = UIImage(named: "CloseIcon", in: .module, with: nil)!
+  public static let closeCircle = UIImage(named: "CloseCircleIcon", in: .module, compatibleWith: nil)!
   public static let crownOutlined = UIImage(named: "CrownOutlinedIcon", in: .module, compatibleWith: nil)!
   public static let heart = UIImage(named: "HeartIcon", in: .module, compatibleWith: nil)!
   public static let heartOutlined = UIImage(named: "HeartOutlinedIcon", in: Bundle.module, compatibleWith: nil)!
