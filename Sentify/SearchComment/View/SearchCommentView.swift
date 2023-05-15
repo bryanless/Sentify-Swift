@@ -12,6 +12,10 @@ import YouTube
 
 struct SearchCommentView: View {
   @ObservedObject private var viewModel: SearchCommentViewModel<
+    GetVideoRepository<
+      GetVideoLocaleDataSource,
+      GetVideoRemoteDataSource,
+      VideoTransformer>,
     GetCommentThreadRepository<
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
@@ -21,6 +25,10 @@ struct SearchCommentView: View {
 
   init(
     viewModel: SearchCommentViewModel<
+    GetVideoRepository<
+    GetVideoLocaleDataSource,
+    GetVideoRemoteDataSource,
+    VideoTransformer>,
     GetCommentThreadRepository<
     GetCommentThreadLocaleDataSource,
     GetCommentThreadRemoteDataSource,
@@ -38,7 +46,7 @@ struct SearchCommentView: View {
           .background(CustomColor.background)
       } else if viewModel.isError {
         CustomEmptyView(label: viewModel.errorMessage)
-      } else if viewModel.items.isEmpty {
+      } else if viewModel.item == nil {
         empty
       } else {
         content
@@ -78,7 +86,7 @@ extension SearchCommentView {
         isFocused: _isSearchBarFocused)
       .textInputAutocapitalization(.never)
       .onSubmit(of: .text) {
-        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.videoId))
+        viewModel.getSentimentAnalysis(request: viewModel.videoId)
       }
       //      Button {
       //        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
@@ -101,8 +109,11 @@ extension SearchCommentView {
 
   var content: some View {
     ObservableScrollView(scrollOffset: $scrollOffset) {
-      CommentListView(comments: viewModel.items)
-        .padding()
+      VStack(spacing: Space.large) {
+        VideoItem(video: viewModel.item!.video)
+        CommentListView(comments: viewModel.item!.commentThreads)
+      }
+      .padding(.horizontal)
     }
     .background(CustomColor.background)
   }
@@ -112,10 +123,15 @@ struct SearchCommentView_Previews: PreviewProvider {
   static var previews: some View {
     SearchCommentView(
       viewModel: SearchCommentViewModel<
+      GetVideoRepository<
+      GetVideoLocaleDataSource,
+      GetVideoRemoteDataSource,
+      VideoTransformer>,
       GetCommentThreadRepository<
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
       CommentThreadTransformer>>(
+        videoRepository: Injection(inMemory: true).provideVideo(),
         commentThreadRepository: Injection(inMemory: true).provideCommentThread()))
   }
 }

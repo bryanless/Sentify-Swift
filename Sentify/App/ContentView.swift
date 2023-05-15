@@ -12,6 +12,10 @@ import YouTube
 
 struct ContentView: View {
   @EnvironmentObject private var searchCommentViewModel: SearchCommentViewModel<
+    GetVideoRepository<
+      GetVideoLocaleDataSource,
+      GetVideoRemoteDataSource,
+      VideoTransformer>,
     GetCommentThreadRepository<
       GetCommentThreadLocaleDataSource,
       GetCommentThreadRemoteDataSource,
@@ -56,6 +60,8 @@ struct ContentView_Previews: PreviewProvider {
 
   static var previews: some View {
     ContentView()
-      .environmentObject(SearchCommentViewModel(commentThreadRepository: commentThreadRepository))
+      .environmentObject(SearchCommentViewModel(
+        videoRepository: videoRepository,
+        commentThreadRepository: commentThreadRepository))
   }
 }

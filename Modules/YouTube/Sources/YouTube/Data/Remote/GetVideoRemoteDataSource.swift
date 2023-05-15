@@ -12,7 +12,7 @@ import Foundation
 
 public struct GetVideoRemoteDataSource: DataSource {
 
-  public typealias Request = VideoRemoteRequest
+  public typealias Request = VideoRequest
   public typealias Response = [VideoResponse]
 
   private let _endpoint: String
@@ -26,7 +26,7 @@ public struct GetVideoRemoteDataSource: DataSource {
     _apiKey = apiKey
   }
 
-  public func execute(request: VideoRemoteRequest?) -> AnyPublisher<[VideoResponse], Error> {
+  public func execute(request: VideoRequest?) -> AnyPublisher<[VideoResponse], Error> {
     return Future<[VideoResponse], Error> { completion in
       guard let request = request else {
         return completion(.failure(URLError.invalidRequest))
@@ -50,10 +50,14 @@ public struct GetVideoRemoteDataSource: DataSource {
             completion(.success(value.items))
           case .failure(let error):
             if let error = error.underlyingError as? Foundation.URLError, error.code == .notConnectedToInternet {
-              // No internet connection
               completion(.failure(URLError.notConnectedToInternet))
             } else {
-              completion(.failure(URLError.invalidResponse))
+              switch error.responseCode {
+              case 404:
+                completion(.failure(URLError.notFound))
+              default:
+                completion(.failure(URLError.invalidResponse))
+              }
             }
           }
         }

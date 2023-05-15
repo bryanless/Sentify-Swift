@@ -11,29 +11,46 @@ import Foundation
 import YouTube
 
 class SearchCommentViewModel<
+  VideoRepository: Repository,
   CommentThreadRepository: Repository>: ObservableObject
-where CommentThreadRepository.Request == CommentThreadRequest,
+where VideoRepository.Request == VideoRequest,
+      VideoRepository.Response == [VideoModel],
+      CommentThreadRepository.Request == CommentThreadRequest,
       CommentThreadRepository.Response == [CommentThreadModel] {
 
   private var cancellables: Set<AnyCancellable> = []
 
+  private let _videoRepository: VideoRepository
   private let _commentThreadRepository: CommentThreadRepository
 
   @Published public var videoId: String = ""
-  @Published public var items: [CommentThreadModel] = []
+  @Published public var item: SentimentAnalysisModel?
   @Published public var errorMessage: String = ""
   @Published public var isLoading: Bool = false
   @Published public var isError: Bool = false
 
   public init(
+    videoRepository: VideoRepository,
     commentThreadRepository: CommentThreadRepository
   ) {
+    self._videoRepository = videoRepository
     self._commentThreadRepository = commentThreadRepository
   }
 
-  func getCommentThreads(request: CommentThreadRepository.Request) {
+  func getSentimentAnalysis(request: String) {
     isLoading = true
-    _commentThreadRepository.execute(request: request)
+
+    let videoRequest = VideoRequest(id: request)
+    let commentThreadRequest = CommentThreadRequest(videoId: request)
+
+    let videoPublisher = _videoRepository.execute(request: videoRequest)
+    let commentPublisher = _commentThreadRepository.execute(request: commentThreadRequest)
+
+    let loadingPublishers = Publishers.CombineLatest(
+      videoPublisher,
+      commentPublisher)
+
+    loadingPublishers
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
         switch completion {
@@ -44,9 +61,14 @@ where CommentThreadRepository.Request == CommentThreadRequest,
         case .finished:
           self.isLoading = false
         }
-      }, receiveValue: { comments in
+      }, receiveValue: { sentimentAnalysis in
         self.isError = false
-        self.items = comments
+
+        let video = sentimentAnalysis.0.first!
+
+        self.item = SentimentAnalysisModel(
+          video: video,
+          commentThreads: sentimentAnalysis.1)
       })
       .store(in: &cancellables)
   }

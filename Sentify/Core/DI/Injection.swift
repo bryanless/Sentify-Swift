@@ -47,4 +47,25 @@ final class Injection: NSObject {
 
     return repository as! R
   }
+
+  func provideVideo<R: Repository>() -> R
+  where
+  R.Request == VideoRequest,
+  R.Response == [VideoModel] {
+    let locale = GetVideoLocaleDataSource(realm: realm)
+
+    let remote = GetVideoRemoteDataSource(
+      endpoint: YouTubeEndpoints.Gets.videos.url,
+      apiKey: YouTubeApi.apiKey
+    )
+
+    let mapper = VideoTransformer()
+
+    let repository = GetVideoRepository(
+      localeDataSource: locale,
+      remoteDataSource: remote,
+      mapper: mapper)
+
+    return repository as! R
+  }
 }

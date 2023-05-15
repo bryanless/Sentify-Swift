@@ -59,11 +59,11 @@ public struct GetCommentThreadLocaleDataSource: LocaleDataSource {
     .eraseToAnyPublisher()
   }
 
-  public func get(id: Int) -> AnyPublisher<CommentThreadEntity, Error> {
+  public func get(id: String) -> AnyPublisher<CommentThreadEntity, Error> {
     fatalError("Not implemented")
   }
 
-  public func update(id: Int, entity: CommentThreadEntity) -> AnyPublisher<Bool, Error> {
+  public func update(id: String, entity: CommentThreadEntity) -> AnyPublisher<Bool, Error> {
     fatalError("Not implemented")
   }
 

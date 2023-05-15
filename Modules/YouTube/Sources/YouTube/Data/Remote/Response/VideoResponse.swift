@@ -10,7 +10,7 @@ import Foundation
 // MARK: - VideoResponse
 public struct VideoResponse: Codable {
   let kind, etag, id: String
-  let snippet: VideoSnippet?
+  let snippet: VideoSnippet
 }
 
 // MARK: - VideoSnippet
