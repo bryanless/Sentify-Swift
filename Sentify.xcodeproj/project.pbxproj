@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		937CC5352A11E36B00BBC582 /* SentimentAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5342A11E36B00BBC582 /* SentimentAnalysisModel.swift */; };
+		934262712A12297100EA5804 /* MonkeyLearnApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934262702A12297100EA5804 /* MonkeyLearnApiCall.swift */; };
+		934262732A12298A00EA5804 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934262722A12298A00EA5804 /* ApiCall.swift */; };
+		934262762A122C9200EA5804 /* MonkeyLearn in Frameworks */ = {isa = PBXBuildFile; productRef = 934262752A122C9200EA5804 /* MonkeyLearn */; };
+		937CC5352A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */; };
 		937CC5372A11EC5C00BBC582 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5362A11EC5C00BBC582 /* VideoItem.swift */; };
 		937F162D2A08902000157355 /* SentifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162C2A08902000157355 /* SentifyApp.swift */; };
 		937F162F2A08902000157355 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162E2A08902000157355 /* ContentView.swift */; };
@@ -38,18 +41,13 @@
 		939518572A0B7A9000510A3C /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939518562A0B7A9000510A3C /* CommentItem.swift */; };
 		93F4059F2A08B4EF001C03E0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 93F4059E2A08B4EF001C03E0 /* Core */; };
 		93F405A22A08B5D5001C03E0 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 93F405A12A08B5D5001C03E0 /* Common */; };
-		93F405A52A08E799001C03E0 /* SentimentAnalysisHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405A42A08E799001C03E0 /* SentimentAnalysisHistoryView.swift */; };
-		93F405AB2A09F57C001C03E0 /* SearchChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405AA2A09F57C001C03E0 /* SearchChannelView.swift */; };
-		93F405AD2A09FD48001C03E0 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405AC2A09FD48001C03E0 /* ChannelListView.swift */; };
 		93F405B22A0A0783001C03E0 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405B12A0A0783001C03E0 /* UINavigationController+Ext.swift */; };
-		93F405B62A0A08A6001C03E0 /* SearchChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405B52A0A08A6001C03E0 /* SearchChannelViewModel.swift */; };
 		93F405BA2A0A0AC1001C03E0 /* YouTube in Resources */ = {isa = PBXBuildFile; fileRef = 93F405B92A0A0AC1001C03E0 /* YouTube */; };
 		93F405BC2A0A0AE5001C03E0 /* YouTube in Frameworks */ = {isa = PBXBuildFile; productRef = 93F405BB2A0A0AE5001C03E0 /* YouTube */; };
 		93F405BE2A0A0DD2001C03E0 /* YouTubeApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405BD2A0A0DD2001C03E0 /* YouTubeApiCall.swift */; };
 		93F405C02A0A0E04001C03E0 /* File+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405BF2A0A0E04001C03E0 /* File+Ext.swift */; };
 		93F405C42A0A994A001C03E0 /* SearchCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405C32A0A994A001C03E0 /* SearchCommentView.swift */; };
 		93F405C62A0A9A42001C03E0 /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405C52A0A9A42001C03E0 /* CommentListView.swift */; };
-		93F405C82A0A9A79001C03E0 /* VideoCommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405C72A0A9A79001C03E0 /* VideoCommentListView.swift */; };
 		93F405CB2A0A9F83001C03E0 /* SearchCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405CA2A0A9F83001C03E0 /* SearchCommentViewModel.swift */; };
 		93F405CD2A0B210F001C03E0 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F405CC2A0B210F001C03E0 /* Injection.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +70,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		937CC5342A11E36B00BBC582 /* SentimentAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisModel.swift; sourceTree = "<group>"; };
+		934262702A12297100EA5804 /* MonkeyLearnApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyLearnApiCall.swift; sourceTree = "<group>"; };
+		934262722A12298A00EA5804 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		934262742A122C0B00EA5804 /* MonkeyLearn */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MonkeyLearn; path = Modules/MonkeyLearn; sourceTree = "<group>"; };
+		937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSentimentAnalysisModel.swift; sourceTree = "<group>"; };
 		937CC5362A11EC5C00BBC582 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
 		937F16292A08902000157355 /* Sentify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		937F162C2A08902000157355 /* SentifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyApp.swift; sourceTree = "<group>"; };
@@ -106,17 +107,12 @@
 		939518562A0B7A9000510A3C /* CommentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
 		93F4059D2A08B4E7001C03E0 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		93F405A02A08B5A6001C03E0 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Common; path = Modules/Common; sourceTree = "<group>"; };
-		93F405A42A08E799001C03E0 /* SentimentAnalysisHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalysisHistoryView.swift; sourceTree = "<group>"; };
-		93F405AA2A09F57C001C03E0 /* SearchChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChannelView.swift; sourceTree = "<group>"; };
-		93F405AC2A09FD48001C03E0 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
 		93F405B12A0A0783001C03E0 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
-		93F405B52A0A08A6001C03E0 /* SearchChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChannelViewModel.swift; sourceTree = "<group>"; };
 		93F405B92A0A0AC1001C03E0 /* YouTube */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = YouTube; path = Modules/YouTube; sourceTree = "<group>"; };
 		93F405BD2A0A0DD2001C03E0 /* YouTubeApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeApiCall.swift; sourceTree = "<group>"; };
 		93F405BF2A0A0E04001C03E0 /* File+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Ext.swift"; sourceTree = "<group>"; };
 		93F405C32A0A994A001C03E0 /* SearchCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommentView.swift; sourceTree = "<group>"; };
 		93F405C52A0A9A42001C03E0 /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
-		93F405C72A0A9A79001C03E0 /* VideoCommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCommentListView.swift; sourceTree = "<group>"; };
 		93F405CA2A0A9F83001C03E0 /* SearchCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommentViewModel.swift; sourceTree = "<group>"; };
 		93F405CC2A0B210F001C03E0 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934262762A122C9200EA5804 /* MonkeyLearn in Frameworks */,
 				93F405BC2A0A0AE5001C03E0 /* YouTube in Frameworks */,
 				93F4059F2A08B4EF001C03E0 /* Core in Frameworks */,
 				93F405A22A08B5D5001C03E0 /* Common in Frameworks */,
@@ -149,10 +146,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9342626F2A12295100EA5804 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93F405CA2A0A9F83001C03E0 /* SearchCommentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		937F16202A08902000157355 = {
 			isa = PBXGroup;
 			children = (
 				939518522A0B4D6F00510A3C /* .swiftlint.yml */,
+				934262742A122C0B00EA5804 /* MonkeyLearn */,
 				93F4059D2A08B4E7001C03E0 /* Core */,
 				93F405A02A08B5A6001C03E0 /* Common */,
 				93F405B92A0A0AC1001C03E0 /* YouTube */,
@@ -181,11 +187,7 @@
 				937F16D82A08AAAC00157355 /* App */,
 				93F405AE2A0A0764001C03E0 /* Core */,
 				93F405C12A0A9920001C03E0 /* SearchComment */,
-				93F405A92A09F562001C03E0 /* VideoCommentList */,
-				93F405A82A09F551001C03E0 /* VideoList */,
-				93F405A72A09F547001C03E0 /* ChannelList */,
-				93F405A62A09F526001C03E0 /* SearchChannel */,
-				93F405A32A08E769001C03E0 /* SentimentAnalysisHistory */,
+				93F405A92A09F562001C03E0 /* CommentList */,
 				937F16582A08921400157355 /* Supporting Files */,
 				937F16322A08902100157355 /* Preview Content */,
 			);
@@ -276,44 +278,12 @@
 			path = YouTubeViews;
 			sourceTree = "<group>";
 		};
-		93F405A32A08E769001C03E0 /* SentimentAnalysisHistory */ = {
-			isa = PBXGroup;
-			children = (
-				93F405A42A08E799001C03E0 /* SentimentAnalysisHistoryView.swift */,
-			);
-			path = SentimentAnalysisHistory;
-			sourceTree = "<group>";
-		};
-		93F405A62A09F526001C03E0 /* SearchChannel */ = {
-			isa = PBXGroup;
-			children = (
-				93F405B52A0A08A6001C03E0 /* SearchChannelViewModel.swift */,
-				93F405B72A0A08AD001C03E0 /* View */,
-			);
-			path = SearchChannel;
-			sourceTree = "<group>";
-		};
-		93F405A72A09F547001C03E0 /* ChannelList */ = {
-			isa = PBXGroup;
-			children = (
-				93F405AC2A09FD48001C03E0 /* ChannelListView.swift */,
-			);
-			path = ChannelList;
-			sourceTree = "<group>";
-		};
-		93F405A82A09F551001C03E0 /* VideoList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VideoList;
-			sourceTree = "<group>";
-		};
-		93F405A92A09F562001C03E0 /* VideoCommentList */ = {
+		93F405A92A09F562001C03E0 /* CommentList */ = {
 			isa = PBXGroup;
 			children = (
 				93F405C92A0A9F6D001C03E0 /* View */,
 			);
-			path = VideoCommentList;
+			path = CommentList;
 			sourceTree = "<group>";
 		};
 		93F405AE2A0A0764001C03E0 /* Core */ = {
@@ -346,7 +316,9 @@
 		93F405B32A0A07AA001C03E0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				934262722A12298A00EA5804 /* ApiCall.swift */,
 				93F405BD2A0A0DD2001C03E0 /* YouTubeApiCall.swift */,
+				934262702A12297100EA5804 /* MonkeyLearnApiCall.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -359,20 +331,12 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		93F405B72A0A08AD001C03E0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				93F405AA2A09F57C001C03E0 /* SearchChannelView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		93F405C12A0A9920001C03E0 /* SearchComment */ = {
 			isa = PBXGroup;
 			children = (
-				93F405CA2A0A9F83001C03E0 /* SearchCommentViewModel.swift */,
+				937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */,
+				9342626F2A12295100EA5804 /* ViewModel */,
 				93F405C22A0A9938001C03E0 /* View */,
-				937CC5342A11E36B00BBC582 /* SentimentAnalysisModel.swift */,
 			);
 			path = SearchComment;
 			sourceTree = "<group>";
@@ -388,7 +352,6 @@
 		93F405C92A0A9F6D001C03E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93F405C72A0A9A79001C03E0 /* VideoCommentListView.swift */,
 				93F405C52A0A9A42001C03E0 /* CommentListView.swift */,
 			);
 			path = View;
@@ -416,6 +379,7 @@
 				93F4059E2A08B4EF001C03E0 /* Core */,
 				93F405A12A08B5D5001C03E0 /* Common */,
 				93F405BB2A0A0AE5001C03E0 /* YouTube */,
+				934262752A122C9200EA5804 /* MonkeyLearn */,
 			);
 			productName = Sentify;
 			productReference = 937F16292A08902000157355 /* Sentify.app */;
@@ -596,23 +560,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F405A52A08E799001C03E0 /* SentimentAnalysisHistoryView.swift in Sources */,
 				93F405BE2A0A0DD2001C03E0 /* YouTubeApiCall.swift in Sources */,
 				937CC5372A11EC5C00BBC582 /* VideoItem.swift in Sources */,
 				93F405B22A0A0783001C03E0 /* UINavigationController+Ext.swift in Sources */,
-				937CC5352A11E36B00BBC582 /* SentimentAnalysisModel.swift in Sources */,
+				937CC5352A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift in Sources */,
 				93F405C62A0A9A42001C03E0 /* CommentListView.swift in Sources */,
 				93F405CB2A0A9F83001C03E0 /* SearchCommentViewModel.swift in Sources */,
 				939518572A0B7A9000510A3C /* CommentItem.swift in Sources */,
-				93F405AD2A09FD48001C03E0 /* ChannelListView.swift in Sources */,
-				93F405AB2A09F57C001C03E0 /* SearchChannelView.swift in Sources */,
 				93F405C42A0A994A001C03E0 /* SearchCommentView.swift in Sources */,
-				93F405C82A0A9A79001C03E0 /* VideoCommentListView.swift in Sources */,
 				937F162F2A08902000157355 /* ContentView.swift in Sources */,
 				937F162D2A08902000157355 /* SentifyApp.swift in Sources */,
+				934262732A12298A00EA5804 /* ApiCall.swift in Sources */,
 				93F405C02A0A0E04001C03E0 /* File+Ext.swift in Sources */,
+				934262712A12297100EA5804 /* MonkeyLearnApiCall.swift in Sources */,
 				93F405CD2A0B210F001C03E0 /* Injection.swift in Sources */,
-				93F405B62A0A08A6001C03E0 /* SearchChannelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,6 +906,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		934262752A122C9200EA5804 /* MonkeyLearn */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MonkeyLearn;
+		};
 		93F4059E2A08B4EF001C03E0 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;

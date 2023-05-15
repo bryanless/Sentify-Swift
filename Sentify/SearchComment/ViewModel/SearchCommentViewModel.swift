@@ -24,7 +24,7 @@ where VideoRepository.Request == VideoRequest,
   private let _commentThreadRepository: CommentThreadRepository
 
   @Published public var videoId: String = ""
-  @Published public var item: SentimentAnalysisModel?
+  @Published public var item: CommentSentimentAnalysisModel?
   @Published public var errorMessage: String = ""
   @Published public var isLoading: Bool = false
   @Published public var isError: Bool = false
@@ -66,7 +66,7 @@ where VideoRepository.Request == VideoRequest,
 
         let video = sentimentAnalysis.0.first!
 
-        self.item = SentimentAnalysisModel(
+        self.item = CommentSentimentAnalysisModel(
           video: video,
           commentThreads: sentimentAnalysis.1)
       })

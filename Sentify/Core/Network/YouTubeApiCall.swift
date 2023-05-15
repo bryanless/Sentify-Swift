@@ -27,12 +27,6 @@ struct YouTubeApi {
 
 }
 
-protocol Endpoint {
-
-  var url: String { get }
-
-}
-
 enum YouTubeEndpoints {
 
   enum Gets: Endpoint {

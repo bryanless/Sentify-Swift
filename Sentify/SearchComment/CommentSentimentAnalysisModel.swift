@@ -1,5 +1,5 @@
 //
-//  SentimentAnalysisModel.swift
+//  CommentSentimentAnalysisModel.swift
 //  Sentify
 //
 //  Created by Bryan on 15/05/23.
@@ -7,7 +7,7 @@
 
 import YouTube
 
-public struct SentimentAnalysisModel {
+public struct CommentSentimentAnalysisModel {
   public let video: VideoModel
   public let commentThreads: [CommentThreadModel]
 
