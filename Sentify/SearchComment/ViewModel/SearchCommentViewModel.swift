@@ -42,10 +42,28 @@ where VideoRepository.Request == VideoRequest,
   }
 
   func getSentimentAnalysis(request: String) {
+    guard !request.isEmpty else {
+      return
+    }
+
     isLoading = true
 
-    let videoRequest = VideoRequest(id: request)
-    let commentThreadRequest = CommentThreadRequest(videoId: request)
+    var videoId: String = ""
+
+    if let range = request.range(of: "/", options: [.regularExpression, .backwards]),
+       let urlComponents = URLComponents(string: request) {
+      if let id = urlComponents.queryItems?.first(where: { $0.name == "v" })?.value {
+        videoId = id
+      } else {
+        let path = urlComponents.path
+        videoId = String(path[range.upperBound...])
+      }
+    } else {
+      videoId = request
+    }
+
+    let videoRequest = VideoRequest(id: videoId)
+    let commentThreadRequest = CommentThreadRequest(videoId: videoId)
 
     let videoPublisher = _videoRepository.execute(request: videoRequest)
     let commentPublisher = _commentSentimentRepository.execute(request: commentThreadRequest)

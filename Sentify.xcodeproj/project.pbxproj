@@ -221,9 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				939518522A0B4D6F00510A3C /* .swiftlint.yml */,
-				934262742A122C0B00EA5804 /* MonkeyLearn */,
 				93F4059D2A08B4E7001C03E0 /* Core */,
 				93F405A02A08B5A6001C03E0 /* Common */,
+				934262742A122C0B00EA5804 /* MonkeyLearn */,
 				93F405B92A0A0AC1001C03E0 /* YouTube */,
 				937F162B2A08902000157355 /* Sentify */,
 				937F163C2A08902100157355 /* SentifyTests */,
