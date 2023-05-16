@@ -8,6 +8,7 @@
 import Common
 import Core
 import SwiftUI
+import MonkeyLearn
 import YouTube
 
 struct SearchCommentView: View {
@@ -15,11 +16,7 @@ struct SearchCommentView: View {
     GetVideoRepository<
       GetVideoLocaleDataSource,
       GetVideoRemoteDataSource,
-      VideoTransformer>,
-    GetCommentThreadRepository<
-      GetCommentThreadLocaleDataSource,
-      GetCommentThreadRemoteDataSource,
-      CommentThreadTransformer>>
+      VideoTransformer>>
   @FocusState private var isSearchBarFocused: Bool
   @State var scrollOffset: CGFloat
 
@@ -28,11 +25,7 @@ struct SearchCommentView: View {
     GetVideoRepository<
     GetVideoLocaleDataSource,
     GetVideoRemoteDataSource,
-    VideoTransformer>,
-    GetCommentThreadRepository<
-    GetCommentThreadLocaleDataSource,
-    GetCommentThreadRemoteDataSource,
-    CommentThreadTransformer>>,
+    VideoTransformer>>,
     scrollOffset: CGFloat = CGFloat.zero
   ) {
     self.viewModel = viewModel
@@ -111,7 +104,7 @@ extension SearchCommentView {
     ObservableScrollView(scrollOffset: $scrollOffset) {
       VStack(spacing: Space.large) {
         VideoItem(video: viewModel.item!.video)
-        CommentListView(comments: viewModel.item!.commentThreads)
+        CommentListView(comments: viewModel.item!.commentSentiments)
       }
       .padding(.horizontal)
     }
@@ -126,12 +119,8 @@ struct SearchCommentView_Previews: PreviewProvider {
       GetVideoRepository<
       GetVideoLocaleDataSource,
       GetVideoRemoteDataSource,
-      VideoTransformer>,
-      GetCommentThreadRepository<
-      GetCommentThreadLocaleDataSource,
-      GetCommentThreadRemoteDataSource,
-      CommentThreadTransformer>>(
+      VideoTransformer>>(
         videoRepository: Injection(inMemory: true).provideVideo(),
-        commentThreadRepository: Injection(inMemory: true).provideCommentThread()))
+        commentSentimentRepository: Injection(inMemory: true).provideCommentSentiment()))
   }
 }

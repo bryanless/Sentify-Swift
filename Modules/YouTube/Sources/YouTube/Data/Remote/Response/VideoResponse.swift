@@ -9,17 +9,17 @@ import Foundation
 
 // MARK: - VideoResponse
 public struct VideoResponse: Codable {
-  let kind, etag, id: String
-  let snippet: VideoSnippet
+  public let kind, etag, id: String
+  public let snippet: VideoSnippet
 }
 
 // MARK: - VideoSnippet
 public struct VideoSnippet: Codable {
   //    let publishedAt: Date
   //  let channelId: String
-  let title, description: String
-  let thumbnails: Thumbnails
-  let channelTitle: String
+  public let title, description: String
+  public let thumbnails: Thumbnails
+  public let channelTitle: String
   //    let tags: [String]
   //    let categoryId, liveBroadcastContent: String
   //    let localized: Localized
@@ -27,5 +27,5 @@ public struct VideoSnippet: Codable {
 
 // MARK: - Localized
 public struct Localized: Codable {
-  let title, description: String
+  public let title, description: String
 }

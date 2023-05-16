@@ -26,8 +26,8 @@ public struct PageInfo: Codable {
 
 // MARK: - Thumbnails
 public struct Thumbnails: Codable {
-  let thumbnailsDefault, medium, high: Default
-  let standard, maxres: Default
+  public let thumbnailsDefault, medium, high: Default
+  public let standard, maxres: Default
 
   enum CodingKeys: String, CodingKey {
     case thumbnailsDefault = "default"
@@ -38,6 +38,6 @@ public struct Thumbnails: Codable {
 
 // MARK: - Default
 public struct Default: Codable {
-  let url: String
-  let width, height: Int
+  public let url: String
+  public let width, height: Int
 }

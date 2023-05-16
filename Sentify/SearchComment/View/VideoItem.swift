@@ -61,11 +61,13 @@ extension VideoItem {
 struct VideoItem_Previews: PreviewProvider {
   static var previews: some View {
     CommentItem(
-      commentThread: CommentThreadModel(
+      commentThread: CommentSentimentModel(
         id: "id",
         videoId: "videoId",
         title: "This a short, one sentence comment which is commonly seen in the comment section.",
       authorDisplayName: "Author Name",
-      authorProfileImageUrl: ""))
+      authorProfileImageUrl: "",
+      tagName: "positive",
+      confidence: "0"))
   }
 }

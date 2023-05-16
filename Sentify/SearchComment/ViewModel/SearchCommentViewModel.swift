@@ -8,33 +8,37 @@
 import Combine
 import Core
 import Foundation
+import MonkeyLearn
 import YouTube
 
 class SearchCommentViewModel<
-  VideoRepository: Repository,
-  CommentThreadRepository: Repository>: ObservableObject
+  VideoRepository: Repository>: ObservableObject
 where VideoRepository.Request == VideoRequest,
-      VideoRepository.Response == [VideoModel],
-      CommentThreadRepository.Request == CommentThreadRequest,
-      CommentThreadRepository.Response == [CommentThreadModel] {
+      VideoRepository.Response == [VideoModel] {
 
   private var cancellables: Set<AnyCancellable> = []
 
   private let _videoRepository: VideoRepository
-  private let _commentThreadRepository: CommentThreadRepository
+  private let _commentSentimentRepository: GetCommentSentimentRepository<
+    GetCommentSentimentLocaleDataSource,
+    GetCommentThreadRemoteDataSource,
+    GetSentimentRemoteDataSource>
 
   @Published public var videoId: String = ""
-  @Published public var item: CommentSentimentAnalysisModel?
+  @Published public var item: YouTubeSentimentModel?
   @Published public var errorMessage: String = ""
   @Published public var isLoading: Bool = false
   @Published public var isError: Bool = false
 
   public init(
     videoRepository: VideoRepository,
-    commentThreadRepository: CommentThreadRepository
+    commentSentimentRepository: GetCommentSentimentRepository<
+    GetCommentSentimentLocaleDataSource,
+    GetCommentThreadRemoteDataSource,
+    GetSentimentRemoteDataSource>
   ) {
     self._videoRepository = videoRepository
-    self._commentThreadRepository = commentThreadRepository
+    self._commentSentimentRepository = commentSentimentRepository
   }
 
   func getSentimentAnalysis(request: String) {
@@ -44,7 +48,7 @@ where VideoRepository.Request == VideoRequest,
     let commentThreadRequest = CommentThreadRequest(videoId: request)
 
     let videoPublisher = _videoRepository.execute(request: videoRequest)
-    let commentPublisher = _commentThreadRepository.execute(request: commentThreadRequest)
+    let commentPublisher = _commentSentimentRepository.execute(request: commentThreadRequest)
 
     let loadingPublishers = Publishers.CombineLatest(
       videoPublisher,
@@ -66,9 +70,9 @@ where VideoRepository.Request == VideoRequest,
 
         let video = sentimentAnalysis.0.first!
 
-        self.item = CommentSentimentAnalysisModel(
+        self.item = YouTubeSentimentModel(
           video: video,
-          commentThreads: sentimentAnalysis.1)
+          commentSentiments: sentimentAnalysis.1)
       })
       .store(in: &cancellables)
   }

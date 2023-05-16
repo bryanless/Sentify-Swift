@@ -9,7 +9,7 @@ import SwiftUI
 import YouTube
 
 struct CommentListView: View {
-  let comments: [CommentThreadModel]
+  let comments: [CommentSentimentModel]
 
   var body: some View {
     ForEach(comments) { comment in

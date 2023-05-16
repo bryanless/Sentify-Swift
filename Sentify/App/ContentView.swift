@@ -15,11 +15,7 @@ struct ContentView: View {
     GetVideoRepository<
       GetVideoLocaleDataSource,
       GetVideoRemoteDataSource,
-      VideoTransformer>,
-    GetCommentThreadRepository<
-      GetCommentThreadLocaleDataSource,
-      GetCommentThreadRemoteDataSource,
-      CommentThreadTransformer>>
+      VideoTransformer>>
   @State private var selection: Tab = .search
 
   init() {
@@ -32,21 +28,6 @@ struct ContentView: View {
     CustomNavigationView {
       SearchCommentView(viewModel: searchCommentViewModel)
     }
-    //    VStack(spacing: 0) {
-    //      TabView(selection: $selection) {
-    //        CustomNavigationView {
-    //          AnalyzeSentimentView()
-    //        }
-    //        .tag(Tab.search)
-    //
-    //        CustomNavigationView {
-    //          SentimentAnalysisHistoryView()
-    //        }
-    //        .tag(Tab.history)
-    //      }
-    //
-    //      TabBar(selection: $selection)
-    //    }
   }
 }
 
@@ -60,8 +41,13 @@ struct ContentView_Previews: PreviewProvider {
 
   static var previews: some View {
     ContentView()
-      .environmentObject(SearchCommentViewModel(
-        videoRepository: videoRepository,
-        commentThreadRepository: commentThreadRepository))
+      .environmentObject(
+        SearchCommentViewModel<
+        GetVideoRepository<
+        GetVideoLocaleDataSource,
+        GetVideoRemoteDataSource,
+        VideoTransformer>>(
+          videoRepository: videoRepository,
+          commentSentimentRepository: commentSentimentRepository))
   }
 }

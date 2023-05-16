@@ -7,6 +7,7 @@
 
 import Core
 import Foundation
+import MonkeyLearn
 import RealmSwift
 import YouTube
 
@@ -68,4 +69,31 @@ final class Injection: NSObject {
 
     return repository as! R
   }
+
+  func provideCommentSentiment() -> GetCommentSentimentRepository<
+    GetCommentSentimentLocaleDataSource,
+    GetCommentThreadRemoteDataSource,
+    GetSentimentRemoteDataSource> {
+      let locale = GetCommentSentimentLocaleDataSource(realm: realm)
+
+      let commentThreadRemote = GetCommentThreadRemoteDataSource(
+        endpoint: YouTubeEndpoints.Gets.commentThreads.url,
+        apiKey: YouTubeApi.apiKey
+      )
+
+      let sentimentRemote = GetSentimentRemoteDataSource(
+        endpoint: MonkeyLearnEndpoints.Gets.sentimentAnalysis.url,
+        headers: MonkeyLearnApi.headers
+      )
+
+      let mapper = CommentSentimentTransformer()
+
+      let repository = GetCommentSentimentRepository(
+        localeDataSource: locale,
+        commentRemoteDataSource: commentThreadRemote,
+        sentimentRemoteDataSource: sentimentRemote,
+        mapper: mapper)
+
+      return repository
+    }
 }

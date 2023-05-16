@@ -9,38 +9,38 @@ import Foundation
 
 // MARK: - CommentThreadResponse
 public struct CommentThreadResponse: Codable {
-    let kind, etag, id: String
-    let snippet: CommentThreadResponseSnippet
+  public let kind, etag, id: String
+  public let snippet: CommentThreadResponseSnippet
 }
 
 // MARK: - CommentThreadResponseSnippet
 public struct CommentThreadResponseSnippet: Codable {
-    let videoId: String
-    let topLevelComment: TopLevelComment
-    let canReply: Bool
-    let totalReplyCount: Int
-    let isPublic: Bool
+  public let videoId: String
+  public let topLevelComment: TopLevelComment
+  public let canReply: Bool
+  public let totalReplyCount: Int
+  public let isPublic: Bool
 }
 
 // MARK: - TopLevelComment
 public struct TopLevelComment: Codable {
-    let kind, etag, id: String
-    let snippet: TopLevelCommentSnippet
+  public let kind, etag, id: String
+  public let snippet: TopLevelCommentSnippet
 }
 
 // MARK: - TopLevelCommentSnippet
 public struct TopLevelCommentSnippet: Codable {
-    let videoId, textDisplay, textOriginal, authorDisplayName: String
-    let authorProfileImageUrl: String
-    let authorChannelUrl: String
-    let authorChannelId: AuthorChannelID
-    let canRate: Bool
-    let viewerRating: String
-    let likeCount: Int
-//    let publishedAt, updatedAt: Date
+  public let videoId, textDisplay, textOriginal, authorDisplayName: String
+  public let authorProfileImageUrl: String
+  public let authorChannelUrl: String
+  public let authorChannelId: AuthorChannelID
+  public let canRate: Bool
+  public let viewerRating: String
+  public let likeCount: Int
+  //    let publishedAt, updatedAt: Date
 }
 
 // MARK: - AuthorChannelID
 public struct AuthorChannelID: Codable {
-    let value: String
+  public let value: String
 }

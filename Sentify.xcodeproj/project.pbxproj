@@ -10,7 +10,12 @@
 		934262712A12297100EA5804 /* MonkeyLearnApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934262702A12297100EA5804 /* MonkeyLearnApiCall.swift */; };
 		934262732A12298A00EA5804 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934262722A12298A00EA5804 /* ApiCall.swift */; };
 		934262762A122C9200EA5804 /* MonkeyLearn in Frameworks */ = {isa = PBXBuildFile; productRef = 934262752A122C9200EA5804 /* MonkeyLearn */; };
-		937CC5352A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */; };
+		9364DA6A2A12A5240086EA44 /* YouTubeSentimentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9364DA692A12A5240086EA44 /* YouTubeSentimentEntity.swift */; };
+		9364DA6F2A12A8000086EA44 /* GetCommentSentimentLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9364DA6E2A12A8000086EA44 /* GetCommentSentimentLocaleDataSource.swift */; };
+		9364DA782A12AA770086EA44 /* GetCommentSentimentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9364DA772A12AA770086EA44 /* GetCommentSentimentRepository.swift */; };
+		9364DA7A2A12AE8A0086EA44 /* CommentSentimentTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9364DA792A12AE8A0086EA44 /* CommentSentimentTransformer.swift */; };
+		937466E22A131478001F67D8 /* CommentSentimentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937466E12A131478001F67D8 /* CommentSentimentModel.swift */; };
+		937CC5352A11E36B00BBC582 /* YouTubeSentimentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5342A11E36B00BBC582 /* YouTubeSentimentModel.swift */; };
 		937CC5372A11EC5C00BBC582 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CC5362A11EC5C00BBC582 /* VideoItem.swift */; };
 		937F162D2A08902000157355 /* SentifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162C2A08902000157355 /* SentifyApp.swift */; };
 		937F162F2A08902000157355 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F162E2A08902000157355 /* ContentView.swift */; };
@@ -73,7 +78,12 @@
 		934262702A12297100EA5804 /* MonkeyLearnApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyLearnApiCall.swift; sourceTree = "<group>"; };
 		934262722A12298A00EA5804 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		934262742A122C0B00EA5804 /* MonkeyLearn */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MonkeyLearn; path = Modules/MonkeyLearn; sourceTree = "<group>"; };
-		937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSentimentAnalysisModel.swift; sourceTree = "<group>"; };
+		9364DA692A12A5240086EA44 /* YouTubeSentimentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeSentimentEntity.swift; sourceTree = "<group>"; };
+		9364DA6E2A12A8000086EA44 /* GetCommentSentimentLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentSentimentLocaleDataSource.swift; sourceTree = "<group>"; };
+		9364DA772A12AA770086EA44 /* GetCommentSentimentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentSentimentRepository.swift; sourceTree = "<group>"; };
+		9364DA792A12AE8A0086EA44 /* CommentSentimentTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSentimentTransformer.swift; sourceTree = "<group>"; };
+		937466E12A131478001F67D8 /* CommentSentimentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSentimentModel.swift; sourceTree = "<group>"; };
+		937CC5342A11E36B00BBC582 /* YouTubeSentimentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeSentimentModel.swift; sourceTree = "<group>"; };
 		937CC5362A11EC5C00BBC582 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
 		937F16292A08902000157355 /* Sentify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		937F162C2A08902000157355 /* SentifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentifyApp.swift; sourceTree = "<group>"; };
@@ -154,6 +164,59 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9364DA682A12A4FF0086EA44 /* CommentSentiment */ = {
+			isa = PBXGroup;
+			children = (
+				9364DA6B2A12A52A0086EA44 /* Data */,
+				9364DA762A12AA090086EA44 /* Domain */,
+				9364DA752A12AA060086EA44 /* Mapper */,
+			);
+			path = CommentSentiment;
+			sourceTree = "<group>";
+		};
+		9364DA6B2A12A52A0086EA44 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9364DA6C2A12A7E60086EA44 /* Locale */,
+				9364DA772A12AA770086EA44 /* GetCommentSentimentRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9364DA6C2A12A7E60086EA44 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				9364DA6D2A12A7EB0086EA44 /* Entity */,
+				9364DA6E2A12A8000086EA44 /* GetCommentSentimentLocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		9364DA6D2A12A7EB0086EA44 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9364DA692A12A5240086EA44 /* YouTubeSentimentEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9364DA752A12AA060086EA44 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9364DA792A12AE8A0086EA44 /* CommentSentimentTransformer.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9364DA762A12AA090086EA44 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				937CC5342A11E36B00BBC582 /* YouTubeSentimentModel.swift */,
+				937466E12A131478001F67D8 /* CommentSentimentModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		937F16202A08902000157355 = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +246,6 @@
 		937F162B2A08902000157355 /* Sentify */ = {
 			isa = PBXGroup;
 			children = (
-				939518552A0B7A5F00510A3C /* YouTubeViews */,
 				937F16D82A08AAAC00157355 /* App */,
 				93F405AE2A0A0764001C03E0 /* Core */,
 				93F405C12A0A9920001C03E0 /* SearchComment */,
@@ -269,15 +331,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		939518552A0B7A5F00510A3C /* YouTubeViews */ = {
-			isa = PBXGroup;
-			children = (
-				939518562A0B7A9000510A3C /* CommentItem.swift */,
-				937CC5362A11EC5C00BBC582 /* VideoItem.swift */,
-			);
-			path = YouTubeViews;
-			sourceTree = "<group>";
-		};
 		93F405A92A09F562001C03E0 /* CommentList */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +342,7 @@
 		93F405AE2A0A0764001C03E0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9364DA682A12A4FF0086EA44 /* CommentSentiment */,
 				93F405B42A0A07B6001C03E0 /* DI */,
 				93F405B32A0A07AA001C03E0 /* Network */,
 				93F405AF2A0A0768001C03E0 /* Utils */,
@@ -334,7 +388,6 @@
 		93F405C12A0A9920001C03E0 /* SearchComment */ = {
 			isa = PBXGroup;
 			children = (
-				937CC5342A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift */,
 				9342626F2A12295100EA5804 /* ViewModel */,
 				93F405C22A0A9938001C03E0 /* View */,
 			);
@@ -345,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				93F405C32A0A994A001C03E0 /* SearchCommentView.swift */,
+				937CC5362A11EC5C00BBC582 /* VideoItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				93F405C52A0A9A42001C03E0 /* CommentListView.swift */,
+				939518562A0B7A9000510A3C /* CommentItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -560,20 +615,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9364DA6F2A12A8000086EA44 /* GetCommentSentimentLocaleDataSource.swift in Sources */,
+				937466E22A131478001F67D8 /* CommentSentimentModel.swift in Sources */,
 				93F405BE2A0A0DD2001C03E0 /* YouTubeApiCall.swift in Sources */,
 				937CC5372A11EC5C00BBC582 /* VideoItem.swift in Sources */,
 				93F405B22A0A0783001C03E0 /* UINavigationController+Ext.swift in Sources */,
-				937CC5352A11E36B00BBC582 /* CommentSentimentAnalysisModel.swift in Sources */,
+				937CC5352A11E36B00BBC582 /* YouTubeSentimentModel.swift in Sources */,
 				93F405C62A0A9A42001C03E0 /* CommentListView.swift in Sources */,
 				93F405CB2A0A9F83001C03E0 /* SearchCommentViewModel.swift in Sources */,
 				939518572A0B7A9000510A3C /* CommentItem.swift in Sources */,
 				93F405C42A0A994A001C03E0 /* SearchCommentView.swift in Sources */,
 				937F162F2A08902000157355 /* ContentView.swift in Sources */,
 				937F162D2A08902000157355 /* SentifyApp.swift in Sources */,
+				9364DA6A2A12A5240086EA44 /* YouTubeSentimentEntity.swift in Sources */,
 				934262732A12298A00EA5804 /* ApiCall.swift in Sources */,
+				9364DA782A12AA770086EA44 /* GetCommentSentimentRepository.swift in Sources */,
 				93F405C02A0A0E04001C03E0 /* File+Ext.swift in Sources */,
 				934262712A12297100EA5804 /* MonkeyLearnApiCall.swift in Sources */,
 				93F405CD2A0B210F001C03E0 /* Injection.swift in Sources */,
+				9364DA7A2A12AE8A0086EA44 /* CommentSentimentTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

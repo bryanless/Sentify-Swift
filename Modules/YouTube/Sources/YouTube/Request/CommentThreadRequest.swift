@@ -6,9 +6,9 @@
 //
 
 public struct CommentThreadRequest {
-  let part: String
-  let videoId: String
-  let order: CommentThreadOrderRequest
+  public let part: String
+  public let videoId: String
+  public let order: CommentThreadOrderRequest
 
   public init(
     part: String = "snippet",
@@ -25,11 +25,11 @@ public enum CommentThreadOrderRequest: String {
   case time
   case relevance
 
-  var name: String {
+  public var name: String {
     return rawValue.lowercased()
   }
 
-  var sortKey: String {
+  public var sortKey: String {
     switch self {
     case .time:
       return "publishedAt"

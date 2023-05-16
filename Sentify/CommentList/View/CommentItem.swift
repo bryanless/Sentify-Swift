@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 import YouTube
 
 struct CommentItem: View {
-  let commentThread: CommentThreadModel
+  let commentThread: CommentSentimentModel
 
   var body: some View {
     HStack(alignment: .top, spacing: Space.medium) {
@@ -52,7 +52,13 @@ extension CommentItem {
 
   var tags: some View {
     HStack {
-      Chip(label: "Positive", cornerRadius: RoundedShape.full)
+      Chip(
+        label: commentThread.tagName,
+        background: commentThread.tagName == "positive"
+        ? .green
+        : commentThread.tagName == "negative"
+        ? .red : CustomColor.secondaryContainer,
+        cornerRadius: RoundedShape.full)
     }
   }
 }
@@ -60,11 +66,13 @@ extension CommentItem {
 struct CommentItem_Previews: PreviewProvider {
   static var previews: some View {
     CommentItem(
-      commentThread: CommentThreadModel(
+      commentThread: CommentSentimentModel(
         id: "id",
         videoId: "videoId",
         title: "This a short, one sentence comment which is commonly seen in the comment section.",
       authorDisplayName: "Author Name",
-      authorProfileImageUrl: ""))
+      authorProfileImageUrl: "",
+      tagName: "positive",
+      confidence: "0"))
   }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MonkeyLearn
 import YouTube
 
 let injection = Injection.init()
@@ -20,12 +21,14 @@ let commentThreadRepository: GetCommentThreadRepository<
     GetCommentThreadRemoteDataSource,
     CommentThreadTransformer> = injection.provideCommentThread()
 
+let commentSentimentRepository = injection.provideCommentSentiment()
+
 @main
 struct SentifyApp: App {
 
   let searchCommentViewModel = SearchCommentViewModel(
     videoRepository: videoRepository,
-    commentThreadRepository: commentThreadRepository)
+    commentSentimentRepository: commentSentimentRepository)
 
   var body: some Scene {
     WindowGroup {
