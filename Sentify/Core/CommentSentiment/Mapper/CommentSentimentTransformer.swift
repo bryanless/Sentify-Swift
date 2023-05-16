@@ -25,6 +25,7 @@ public struct CommentSentimentTransformer {
         commentSentimentEntity.title = result.snippet.topLevelComment.snippet.textOriginal
         commentSentimentEntity.authorDisplayName = result.snippet.topLevelComment.snippet.authorDisplayName
         commentSentimentEntity.authorProfileImageUrl = result.snippet.topLevelComment.snippet.authorProfileImageUrl
+        commentSentimentEntity.publishedAt = result.snippet.topLevelComment.snippet.publishedAt
         commentSentimentEntity.tagName = sentiment.classifications.first!.tagName.value
         commentSentimentEntity.confidence = sentiment.classifications.first!.confidence
         return commentSentimentEntity

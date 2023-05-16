@@ -30,17 +30,7 @@ public struct TopLevelComment: Codable {
 
 // MARK: - TopLevelCommentSnippet
 public struct TopLevelCommentSnippet: Codable {
-  public let videoId, textDisplay, textOriginal, authorDisplayName: String
+  public let videoId, textOriginal, authorDisplayName: String
   public let authorProfileImageUrl: String
-  public let authorChannelUrl: String
-  public let authorChannelId: AuthorChannelID
-  public let canRate: Bool
-  public let viewerRating: String
-  public let likeCount: Int
-  //    let publishedAt, updatedAt: Date
-}
-
-// MARK: - AuthorChannelID
-public struct AuthorChannelID: Codable {
-  public let value: String
+  public let publishedAt: String
 }

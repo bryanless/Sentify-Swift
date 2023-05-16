@@ -35,7 +35,7 @@ struct SearchCommentView: View {
   var body: some View {
     ZStack {
       if viewModel.isLoading {
-        ProgressIndicator()
+        ProgressIndicator(label: "Searching video")
           .background(CustomColor.background)
       } else if viewModel.isError {
         CustomEmptyView(label: viewModel.errorMessage)
@@ -70,9 +70,6 @@ extension SearchCommentView {
 
   var search: some View {
     VStack(spacing: Space.medium) {
-      //      Text("Analyze Sentiment of YouTube comments")
-      //        .typography(.headline())
-      //        .multilineTextAlignment(.center)
       SearchField(
         placeholder: "Enter YouTube link",
         searchText: $viewModel.videoId,
@@ -81,16 +78,6 @@ extension SearchCommentView {
       .onSubmit(of: .text) {
         viewModel.getSentimentAnalysis(request: viewModel.videoId)
       }
-      //      Button {
-      //        viewModel.getCommentThreads(request: CommentThreadRequest(videoId: viewModel.channelName))
-      //      } label: {
-      //        HStack {
-      //          Spacer()
-      //          Text("Analyze comments")
-      //          Spacer()
-      //        }
-      //      }
-      //      .buttonStyle(FilledButton())
     }
     .padding()
     .background(scrollOffset > 1 ? CustomColor.surface2 : CustomColor.background)

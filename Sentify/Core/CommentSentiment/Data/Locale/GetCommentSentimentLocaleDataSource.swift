@@ -33,7 +33,7 @@ public struct GetCommentSentimentLocaleDataSource: LocaleDataSource {
           .where {
             $0.videoId == request.videoId
           }
-          .sorted(byKeyPath: request.order.sortKey)
+          .sorted(byKeyPath: request.order.sortKey, ascending: false)
       }()
       completion(.success(comments.toArray(ofType: CommentSentimentEntity.self)))
     }.eraseToAnyPublisher()

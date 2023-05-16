@@ -15,14 +15,10 @@ public struct VideoResponse: Codable {
 
 // MARK: - VideoSnippet
 public struct VideoSnippet: Codable {
-  //    let publishedAt: Date
-  //  let channelId: String
+  public let publishedAt: String
   public let title, description: String
   public let thumbnails: Thumbnails
   public let channelTitle: String
-  //    let tags: [String]
-  //    let categoryId, liveBroadcastContent: String
-  //    let localized: Localized
 }
 
 // MARK: - Localized
