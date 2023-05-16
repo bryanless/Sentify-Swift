@@ -7,6 +7,7 @@
 
 import Common
 import Core
+import MonkeyLearn
 import SwiftUI
 import SDWebImageSwiftUI
 import YouTube
@@ -51,13 +52,25 @@ extension CommentItem {
   }
 
   var tags: some View {
-    HStack {
+    var foregroundColor: Color
+    var background: Color
+
+    if commentThread.tagName == SentimentTagName.positive.value {
+      foregroundColor = CustomColor.onPrimaryContainer
+      background = CustomColor.primaryContainer
+    } else if commentThread.tagName == SentimentTagName.negative.value {
+      foregroundColor = CustomColor.onTertiaryContainer
+      background = CustomColor.tertiaryContainer
+    } else {
+      foregroundColor = CustomColor.onSurface
+      background = CustomColor.surfaceVariant
+    }
+
+    return HStack {
       Chip(
         label: commentThread.tagName,
-        background: commentThread.tagName == "positive"
-        ? .green
-        : commentThread.tagName == "negative"
-        ? .red : CustomColor.secondaryContainer,
+        foregroundColor: foregroundColor,
+        background: background,
         cornerRadius: RoundedShape.full)
     }
   }

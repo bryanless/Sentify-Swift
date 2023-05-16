@@ -15,10 +15,19 @@ public struct SentimentResponse: Codable {
 
 // MARK: - SentimentClassification
 public struct SentimentClassification: Codable {
-  public let tagName, confidence: String
+  public let tagName: SentimentTagName
+  public let confidence: String
 
   enum CodingKeys: String, CodingKey {
     case tagName = "tag_name"
     case confidence
+  }
+}
+
+public enum SentimentTagName: String, Codable {
+  case positive, neutral, negative
+
+  public var value: String {
+    self.rawValue.capitalized
   }
 }

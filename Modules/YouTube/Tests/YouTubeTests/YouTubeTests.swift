@@ -82,7 +82,7 @@ final class YouTubeTests: XCTestCase {
 struct YouTubeApi {
 
   static let baseUrl = "https://www.googleapis.com/youtube/v3/"
-  static let apiKey = "AIzaSyC0JYrEqF4MlojfiTXf-m92H3MgNQexMEw"
+  static let apiKey = ""
 
 }
 
