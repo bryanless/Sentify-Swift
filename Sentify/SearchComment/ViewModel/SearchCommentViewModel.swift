@@ -50,12 +50,13 @@ where VideoRepository.Request == VideoRequest,
 
     var videoId: String = ""
 
-    if let range = request.range(of: "/", options: [.regularExpression, .backwards]),
+    if request.contains("/"),
        let urlComponents = URLComponents(string: request) {
       if let id = urlComponents.queryItems?.first(where: { $0.name == "v" })?.value {
         videoId = id
       } else {
         let path = urlComponents.path
+        let range = path.range(of: "/", options: [.regularExpression, .backwards])!
         videoId = String(path[range.upperBound...])
       }
     } else {
