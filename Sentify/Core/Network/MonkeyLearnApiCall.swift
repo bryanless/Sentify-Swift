@@ -19,7 +19,7 @@ struct MonkeyLearnApi {
     }
 
     if apiKey.starts(with: "_") {
-      debugPrint("Create a MyAnimeList account and get a Client ID (API key) at https://myanimelist.net/apiconfig.")
+      debugPrint("Get an API key at https://monkeylearn.com.")
     }
 
     return ["Authorization": "Token \(apiKey)"]
