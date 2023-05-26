@@ -27,7 +27,7 @@ public struct PageInfo: Codable {
 // MARK: - Thumbnails
 public struct Thumbnails: Codable {
   public let thumbnailsDefault, medium, high: Default
-  public let standard, maxres: Default
+  public let standard, maxres: Default?
 
   enum CodingKeys: String, CodingKey {
     case thumbnailsDefault = "default"
