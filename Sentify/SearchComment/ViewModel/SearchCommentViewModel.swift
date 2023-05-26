@@ -56,8 +56,7 @@ where VideoRepository.Request == VideoRequest,
         videoId = id
       } else {
         let path = urlComponents.path
-        let range = path.range(of: "/", options: [.regularExpression, .backwards])!
-        videoId = String(path[range.upperBound...])
+        videoId = (path as NSString).lastPathComponent
       }
     } else {
       videoId = request
