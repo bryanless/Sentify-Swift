@@ -17,7 +17,7 @@ public struct CustomColor {
   public static let tertiaryContainer = Color("ColorTertiaryContainer")
   public static let onTertiaryContainer = Color("ColorOnTertiaryContainer")
   public static let surface = Color("ColorSurface")
-  public static let surface2 = Color("ColorSurface2")
+  public static let surfaceContainer = Color("ColorSurfaceContainer")
   public static let onSurface = Color("ColorOnSurface")
   public static let surfaceVariant = Color("ColorSurfaceVariant")
   public static let onSurfaceVariant = Color("ColorOnSurfaceVariant")

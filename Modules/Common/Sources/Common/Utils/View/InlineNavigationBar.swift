@@ -20,7 +20,7 @@ public struct InlineNavigationBar<S: ShapeStyle, Content: View>: View {
     scrollOffset: CGFloat,
     label: String,
     alwaysShowLabel: Bool = false,
-    backgroundColor: S = CustomColor.surface2,
+    backgroundColor: S = CustomColor.surfaceContainer,
     @ViewBuilder leading: @escaping () -> Content? = { Text("") },
     @ViewBuilder trailing: @escaping () -> Content? = { Text("") }
   ) {
@@ -103,7 +103,7 @@ public struct BackAppBar<Content: View>: View {
           trailing: Space.medium)
       )
       .frame(width: geo.size.width)
-      .background(scrollOffset > 1 ? CustomColor.surface2 : Color.black.opacity(0))
+      .background(scrollOffset > 1 ? CustomColor.surfaceContainer : Color.black.opacity(0))
     }
   }
 }

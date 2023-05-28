@@ -42,7 +42,7 @@ public struct TabBar: View {
         trailing: Space.medium
       )
     )
-    .background(CustomColor.surface2)
+    .background(CustomColor.surfaceContainer)
   }
 }
 

@@ -80,7 +80,7 @@ extension SearchCommentView {
       }
     }
     .padding()
-    .background(scrollOffset > 1 ? CustomColor.surface2 : CustomColor.background)
+    .background(scrollOffset > 1 ? CustomColor.surfaceContainer : CustomColor.background)
   }
 
   var empty: some View {
